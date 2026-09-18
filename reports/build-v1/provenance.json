@@ -1,0 +1,15 @@
+{
+  "commit": "5ab8dbf996af052772156bbc205d0b529129de01",
+  "protocol_sha256": "eacf2d0c8ba503876117bc829cec3f576300946b49b4ca76a7a47fc0b88411ca",
+  "source_sha256": {
+    "engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine/common.py": "9e84a4a4fc50521ba0901c1d613a53203c52f239e639ffb8d5ac3248f1cdedc0",
+    "engine/dataset.py": "ffbfbb0354a53166536da2440b5fb58a2615cc764a51e88d6841db5d149b4e4d",
+    "engine/pipeline.py": "f12f4f0cea53764aa0722c8a0082b0d8718c9996114f7410b0f12d18079d1abb",
+    "engine/quality.py": "3da7996af296db1e89919a675ed59bced7ba6e663ccf94329f9d0bc9cdd2ed16",
+    "engine/retrieval.py": "13f465eda16cc92a17369215e212a1066e4b926f8572f53046be659994672c7e",
+    "scripts/study.py": "cec5bf1b07317aa8d36df17fc911f300aad703b93ae143cac7b677892cb9d61c",
+    "scripts/systems.py": "e6144e430f9953544858850aa383e0a0aa476c747cb3264d522c22256e10f7e2",
+    "scripts/verify.py": "1485235f7cce568f18ccdc914c32953e06ff5d4d94974580a9a7fca8367ac43f"
+  }
+}

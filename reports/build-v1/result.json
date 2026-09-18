@@ -1,0 +1,26 @@
+{
+  "byte_equality": {
+    "documents.jsonl": true,
+    "documents.parquet": true,
+    "lineage.jsonl": true,
+    "manifest.json": true,
+    "quarantine.jsonl": true
+  },
+  "ray": {
+    "processed_shards": 256,
+    "resumed_shards": 0,
+    "reused_snapshot": false,
+    "version": "acbf7d7e17c86683b005187c",
+    "wall_seconds": 0.4199271659999795
+  },
+  "ray_startup_seconds": 3.7248154999997496,
+  "ray_version": "2.54.0",
+  "scope": "real single-host Ray Core tasks,4CPUs; not Ray Data streaming or a multi-node cluster",
+  "serial": {
+    "processed_shards": 256,
+    "resumed_shards": 0,
+    "reused_snapshot": false,
+    "version": "acbf7d7e17c86683b005187c",
+    "wall_seconds": 0.17337666599996737
+  }
+}

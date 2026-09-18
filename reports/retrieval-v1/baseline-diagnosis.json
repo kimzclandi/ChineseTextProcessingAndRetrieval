@@ -1,0 +1,19 @@
+{
+  "candidate": "Only preregistered160/96; no parameter search.",
+  "hypothesis": "Overlap may recover reference spans cut by fixed boundaries; cannot fix lexical mismatch, and may crowd top3 with duplicates.",
+  "metrics": {
+    "document_recall_at3": 0.975,
+    "failures": {
+      "chunk_boundary_or_answer_too_long": 15,
+      "source_not_retrieved": 4,
+      "success": 132,
+      "wrong_chunk_from_source": 9
+    },
+    "latency_median_ms": 6.651832999978069,
+    "latency_p95_ms": 13.520542000151181,
+    "mrr_at3": 0.9489583333333333,
+    "n": 160,
+    "oracle_span_coverage": 0.90625,
+    "span_hit_at3": 0.825
+  }
+}
