@@ -4,7 +4,9 @@
     "repo": "ymcui/cmrc2018",
     "revision": "c0eb1b6ba219847457e6af3180da722bbeb656af",
     "file": "squad-style-data/cmrc2018_train.json",
-    "license": "CC-BY-SA-4.0"
+    "license": "CC-BY-SA-4.0",
+    "sha256": "5497aa2f81908e31d6b0e27d99b1f90ab63a8f58fa92fffe5d17cf62eba0c212",
+    "old_dev_sha256": "e9ff74231f05c230c6fa88b84441ee334d97234cbb610991cd94b82db00c7f1f"
   },
   "selection": {
     "corpus": "all unique eligible raw train contexts, retaining offsets; no query or answers in retrieval index",
@@ -72,5 +74,11 @@
     "model_training": false,
     "generation": false,
     "synthetic_faults": "engineering fixtures only, not business-quality labels"
+  },
+  "quality": {
+    "contact_policy": "quarantine suspected email or mainland mobile-number pattern; rule flags are not verified PII; never copy contact text to quarantine",
+    "text_transform": "preserve original context exactly to preserve answer offsets; normalize title only for family grouping",
+    "incremental": "append-only records, 256 content-hash buckets split into <=64-row shards; reuse unchanged shard cache; reject conflicting source IDs",
+    "executor": "Ray Core bounded tasks, max8 in flight, 4 local CPUs; not Ray Data streaming"
   }
 }
