@@ -1,0 +1,15 @@
+{
+  "document_recall_at3": 0.95625,
+  "failures": {
+    "chunk_boundary_or_answer_too_long": 17,
+    "source_not_retrieved": 7,
+    "success": 130,
+    "wrong_chunk_from_source": 6
+  },
+  "latency_median_ms": 7.495687500068016,
+  "latency_p95_ms": 14.704207999784558,
+  "mrr_at3": 0.93125,
+  "n": 160,
+  "oracle_span_coverage": 0.89375,
+  "span_hit_at3": 0.8125
+}

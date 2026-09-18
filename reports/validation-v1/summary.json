@@ -1,0 +1,12 @@
+{
+  "tests": 31,
+  "full_environment_packages": 29,
+  "ci_environment_packages": 6,
+  "source_rebuild_all_files_match": true,
+  "retrieval_rerank_query_arm_count": 640,
+  "isolated_source_rebuild_records": 2403,
+  "isolated_dev_queries_per_variant": 8,
+  "frozen_source_and_inputs_unchanged_since": "c9f111c",
+  "old_project_head_unchanged": "2a469014b0e3e128fad485419fcd6171f007661d",
+  "scope": "same host new virtualenv and isolated code copy; not another machine or online CI"
+}

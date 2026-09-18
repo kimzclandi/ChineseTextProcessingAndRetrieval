@@ -1,0 +1,8 @@
+{
+  "dev.jsonl": true,
+  "families.json": true,
+  "holdout.jsonl": true,
+  "manifest.json": true,
+  "reference-quarantine.jsonl": true,
+  "source-records.jsonl": true
+}

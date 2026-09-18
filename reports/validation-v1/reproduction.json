@@ -1,0 +1,45 @@
+{
+  "asset_byte_equality": {
+    "documents.jsonl": true,
+    "documents.parquet": true,
+    "lineage.jsonl": true,
+    "quarantine.jsonl": true
+  },
+  "dev_queries": 8,
+  "metrics": {
+    "baseline": {
+      "document_recall_at3": 0.875,
+      "failures": {
+        "source_not_retrieved": 1,
+        "success": 7
+      },
+      "latency_median_ms": 6.85729149972758,
+      "latency_p95_ms": 9.053833000507439,
+      "mrr_at3": 0.875,
+      "n": 8,
+      "oracle_span_coverage": 1.0,
+      "span_hit_at3": 0.875
+    },
+    "candidate": {
+      "document_recall_at3": 0.875,
+      "failures": {
+        "source_not_retrieved": 1,
+        "success": 7
+      },
+      "latency_median_ms": 10.88385399998515,
+      "latency_p95_ms": 14.364208000188228,
+      "mrr_at3": 0.8125,
+      "n": 8,
+      "oracle_span_coverage": 1.0,
+      "span_hit_at3": 0.875
+    }
+  },
+  "pipeline": {
+    "processed_shards": 256,
+    "resumed_shards": 0,
+    "reused_snapshot": false,
+    "version": "acbf7d7e17c86683b005187c",
+    "wall_seconds": 0.28899291700054164
+  },
+  "scope": "Actual serial rebuild and BM25 execution, not model inference; no holdout tuning"
+}
