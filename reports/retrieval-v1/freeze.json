@@ -1,0 +1,23 @@
+{
+  "chunks_sha256": {
+    "baseline": "9d750d9d5a8147c3b32b501ecf5ae2fc52cc3591a2b76b9d45808b783e815372",
+    "candidate": "31e3b6c283d281d656e120102dc66b9f637630a42a67619c05c9aee24be071fe"
+  },
+  "commit": "80263ba5d7818cb5de5c83fd57ea82d473d7dc37",
+  "holdout_sha256": "2a1dc7d5318d8e42963f56e40f4bdb90bc81cf34b7ed6fb523ff8af440928a64",
+  "protocol_sha256": "eacf2d0c8ba503876117bc829cec3f576300946b49b4ca76a7a47fc0b88411ca",
+  "selection_sha256": "fe738dff512e2f784783ca7e0b525abc02bc08808022ee65fc66e9620fd34eb8",
+  "source_sha256": {
+    "engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine/common.py": "9e84a4a4fc50521ba0901c1d613a53203c52f239e639ffb8d5ac3248f1cdedc0",
+    "engine/dataset.py": "ffbfbb0354a53166536da2440b5fb58a2615cc764a51e88d6841db5d149b4e4d",
+    "engine/pipeline.py": "f12f4f0cea53764aa0722c8a0082b0d8718c9996114f7410b0f12d18079d1abb",
+    "engine/quality.py": "3da7996af296db1e89919a675ed59bced7ba6e663ccf94329f9d0bc9cdd2ed16",
+    "engine/retrieval.py": "13f465eda16cc92a17369215e212a1066e4b926f8572f53046be659994672c7e",
+    "scripts/fetch_prepare.py": "9f5c3e48187541f416411759f5395cd402c5e46ed4eb61c64207d54eef4a83b6",
+    "scripts/reproduce.py": "c7cdb9cd196f29ce98d9f58792b344635f812e7a53720e2a98b3b59bca915488",
+    "scripts/study.py": "cec5bf1b07317aa8d36df17fc911f300aad703b93ae143cac7b677892cb9d61c",
+    "scripts/systems.py": "e6144e430f9953544858850aa383e0a0aa476c747cb3264d522c22256e10f7e2",
+    "scripts/verify.py": "1485235f7cce568f18ccdc914c32953e06ff5d4d94974580a9a7fca8367ac43f"
+  }
+}
