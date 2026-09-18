@@ -9,7 +9,7 @@
 | 高质量数据/评测集建设 | 固定源hash、21道offset校验隔离、近重复家族、160/160划分 | data/source-v1、engine/dataset.py | 公共百科数据，无业务专家标签或全面语义去重 |
 | 数据资产体系 | Parquet与JSONL、不可变快照、SQLite版本/血缘、增量缓存 | engine/pipeline.py、data/asset-v1 | 无权限治理平台、对象存储原子提交或EB规模 |
 | 评测驱动数据优化 | 基线dev诊断→一次重叠切块→门槛冻结→holdout配对验证 | reports/retrieval-v1 | 指标为标注span检索覆盖，无模型训练收益 |
-| Python与工程质量 | 31项测试、隔离复现、校验脚本、固定依赖、CI定义 | tests、scripts/reproduce.py、scripts/verify.py | 当前只有本机验证，线上CI未执行 |
+| Python与工程质量 | 37项测试、隔离复现、校验脚本、固定依赖、GitHub Linux CI | tests、scripts/reproduce.py、scripts/verify.py | Linux CI实测测试与640条检索；未验证完整Ray流程异机运行 |
 | LLM、SFT、RAG等理解 | 解释数据加工对检索证据的影响；训练/量化经验由既有Domain QA Lab补充 | docs/INTERVIEW.md | 此项目没有生成器、embedding模型训练、RLHF/RLAIF |
 | AI编程与完整交付 | AI辅助实现、运行、故障验证和审计，保留收益与负结果 | CONTRIBUTIONS.md、reports/RESULTS.md | 用户独立掌握尚未通过主动回忆验证 |
 

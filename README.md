@@ -2,7 +2,7 @@
 
 面向**阿里巴巴 AI 数据工程师**岗位的数据工程实验项目：公开中文数据寻源 → 质量与重复审计 → Ray本地加工 → Parquet/JSONL数据资产与SQLite血缘 → 检索失败分析 → 一次切块改进 → 冻结后留出集评测。
 
-**已实际运行，不是页面演示。** 核心是可验证的数据生产与Evaluation-Driven Development（EDD）。本地独立仓库，尚未公开上传。无付费API、云GPU、模型训练或生成式回答；指标是检索证据覆盖，**不是大模型回答准确率、CMRC官方成绩或业务收益**。
+**已实际运行，不是页面演示。** 核心是可验证的数据生产与Evaluation-Driven Development（EDD）。独立公开仓库：[GitHub](https://github.com/kimzclandi/chinese-evidence-data-engine)。无付费API、云GPU、模型训练或生成式回答；指标是检索证据覆盖，**不是大模型回答准确率、CMRC官方成绩或业务收益**。
 
 ## 已运行结果
 
@@ -42,12 +42,12 @@ uv pip install --python .venv/bin/python -r requirements.lock.txt
 .venv/bin/python -m pytest -q
 PYTHONPATH=. .venv/bin/python scripts/verify.py
 # 真正重新执行BM25检索，再与保存排名比较；不调参、不写旧报告
-PYTHONPATH=. .venv/bin/python scripts/verify.py --rerank
+PYTHONPATH=. .venv/bin/python scripts/verify_portable.py
 # 重新加工全部语料并执行8道dev查询，输出隔离且拒绝覆盖
 PYTHONPATH=. .venv/bin/python scripts/reproduce.py --output work/reproduce-01
 ```
 
-证据核验只读；reproduce是实际运行，二者不能混称。Ray故障实验已真实运行，重跑需要本机进程/端口权限。轻量CI定义使用单独requirements-ci.lock.txt；**未上传，线上CI未运行**。
+证据核验只读；reproduce是实际运行，二者不能混称。Ray故障实验已真实运行，重跑需要本机进程/端口权限。轻量CI定义使用单独requirements-ci.lock.txt；**GitHub Linux CI已通过37项测试及640条query-arm重新检索**；这不代表Ray跨机、模型推理或全流程异机复现。[发布与兼容性记录](docs/PUBLICATION.md)。
 
 实际从固定官方源重新下载并重建抽样：
 
