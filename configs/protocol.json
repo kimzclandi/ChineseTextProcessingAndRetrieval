@@ -1,0 +1,76 @@
+{
+  "experiment": "chinese-evidence-data-engine-v1",
+  "source": {
+    "repo": "ymcui/cmrc2018",
+    "revision": "c0eb1b6ba219847457e6af3180da722bbeb656af",
+    "file": "squad-style-data/cmrc2018_train.json",
+    "license": "CC-BY-SA-4.0"
+  },
+  "selection": {
+    "corpus": "all unique eligible raw train contexts, retaining offsets; no query or answers in retrieval index",
+    "eligibility": "nonempty context; valid text/id; keep corpus even if some question offsets are invalid; exclude exact context or normalized title seen in full public CMRC dev (includes previous96)",
+    "evaluation": "one valid question per title/near-duplicate family; hash ordering evidence-v1:<family>, first160 dev next160 holdout; valid means every reference nonempty and original offset matches; fail if insufficient",
+    "near_duplicate": "64-bit SimHash candidate hamming<=3 using four16-bit bands, then char5gram Jaccard>=0.85; heuristic not exhaustive semantic dedup; union shared title and near contexts before split"
+  },
+  "retrieval": {
+    "tokenizer": "Unicode alphanumeric character unigrams+bigrams, no answers or titles",
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "top_k": 3,
+    "max_chars": 480,
+    "baseline": {
+      "size": 160,
+      "stride": 160
+    },
+    "candidate": {
+      "size": 160,
+      "stride": 96
+    },
+    "metrics": [
+      "source_document_recall_at3",
+      "supporting_span_hit_at3",
+      "mrr_at3",
+      "oracle_span_coverage"
+    ],
+    "timing": "one untimed warmup; query wall time perf_counter, single CPU BM25; report median and p95, descriptive only"
+  },
+  "procedure": "Freeze protocol before evaluation; build base, inspect dev failures, run exactly one preregistered overlap candidate; freeze dev selection and source before holdout; evaluate both once on holdout regardless of dev gate; no further tuning. Existing dev96/English sets never used for scoring or tuning.",
+  "gate": {
+    "dev_min_span_hit_gain": 0.02,
+    "dev_max_doc_recall_drop": 0.01,
+    "max_index_chunk_ratio": 1.8
+  },
+  "systems": {
+    "executors": [
+      "serial",
+      "ray-local-4cpu"
+    ],
+    "batch_size": 64,
+    "benchmark_repeats": 3,
+    "order": [
+      "serial",
+      "ray",
+      "ray",
+      "serial",
+      "serial",
+      "ray"
+    ],
+    "faults": [
+      "worker process exit once with Ray task retry",
+      "driver interruption after staged shards before atomic version publication",
+      "duplicate ingestion",
+      "incremental append",
+      "tampered committed artifact"
+    ],
+    "scope": "single host text + structured annotations; no Spark/Flink, no production stream, no cluster or EB claim"
+  },
+  "constraints": {
+    "paid_services": false,
+    "upload": false,
+    "model_training": false,
+    "generation": false,
+    "synthetic_faults": "engineering fixtures only, not business-quality labels"
+  }
+}

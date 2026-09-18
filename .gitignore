@@ -1,0 +1,9 @@
+.venv*/
+.cache/
+work/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.DS_Store
+.env*
+*.safetensors
