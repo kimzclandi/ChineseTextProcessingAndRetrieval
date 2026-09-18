@@ -1,0 +1,34 @@
+{
+  "corpus": {
+    "documents": 2403,
+    "exact_duplicate_rows": 0,
+    "quarantined_rows": 0
+  },
+  "counts": {
+    "candidate_questions": 10142,
+    "invalid_reference_questions": 21,
+    "raw_paragraphs": 2403
+  },
+  "excluded_old_dev_sha256": "e9ff74231f05c230c6fa88b84441ee334d97234cbb610991cd94b82db00c7f1f",
+  "family_audit": {
+    "families": 2402,
+    "heuristic": "Not exhaustive semantic near-duplicate detection.",
+    "near_pairs": [
+      {
+        "a": "fb972ea74de34165600d4e27be78ee5f898ffa43ec9e148cb909dd303e39b58b",
+        "b": "379ea10784fd5daf9a33172b7bc353e3d8daf285a92ab0b3d3faf9386b4b5d35",
+        "jaccard": 0.9363817097415507
+      }
+    ],
+    "simhash_candidates_checked": 1
+  },
+  "files": {
+    "dev.jsonl": "9141b2ce0ff24b2572af61275bed3f240cc886b940135dc2fe32f0a4abd72e53",
+    "families.json": "5e7f69b73ca80c62baa3be7f6ec208fbf418680ae3cb40138b012af24ad23176",
+    "holdout.jsonl": "2a1dc7d5318d8e42963f56e40f4bdb90bc81cf34b7ed6fb523ff8af440928a64",
+    "reference-quarantine.jsonl": "c61f5044c742cd9dcf9a4e5ae504102e6f864558cff40ba98cb74b968e4107e8",
+    "source-records.jsonl": "5fb01a52edb0eb588df7c80054df9f884c6e79104a64e346452d577c6efe87ca"
+  },
+  "selection": "160 development +160 holdout, one question per family; no model outputs used",
+  "source_sha256": "5497aa2f81908e31d6b0e27d99b1f90ab63a8f58fa92fffe5d17cf62eba0c212"
+}

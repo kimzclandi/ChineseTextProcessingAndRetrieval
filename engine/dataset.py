@@ -8,7 +8,7 @@ from .quality import normalize_title,process_batch,consolidate
 
 
 def shingles(text):
-    return {text[i:i+5] for i in range(max(0,len(text)-4))}
+    return {text} if len(text)<5 else {text[i:i+5] for i in range(len(text)-4)}
 
 
 def simhash(text):

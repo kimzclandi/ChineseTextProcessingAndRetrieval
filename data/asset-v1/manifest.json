@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "accepted_rows": 2403,
+    "documents": 2403,
+    "duplicate_rows": 0,
+    "input": 2403,
+    "quarantined": 0
+  },
+  "files": {
+    "documents.jsonl": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+    "documents.parquet": "abdbbcc3b2099685e6555ef4bd8a92e9a731cf0af13ae5a0aea5bd8c903cee83",
+    "lineage.jsonl": "c1b56f974fc42f0ac20bd8db609ebb2d61f712ae50efba06086c4f22902c217b",
+    "quarantine.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "identity": {
+    "batch_size": 64,
+    "input_hash": "f3fa72725d8f8c498ba9e0c7c3c769c813998c673df76c76b0102faf38efcefa",
+    "operator_hash": "615d85f7f024f4f5c98025095a44f4ae74aa6bd7a07533902e1ac16f91b7846b"
+  },
+  "parent": null,
+  "scope": "local filesystem atomic rename + SQLite registration; at-least-once work, idempotent snapshot visibility",
+  "version": "acbf7d7e17c86683b005187c"
+}
