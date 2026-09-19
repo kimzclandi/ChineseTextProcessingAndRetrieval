@@ -13,3 +13,4 @@ jobs:
       - run: python -m pip install -r requirements-ci.lock.txt
       - run: python -m pytest -q
       - run: PYTHONPATH=. python scripts/verify_portable.py
+      - run: PYTHONPATH=. python scripts/reproduce_portable.py --output work/ci-reproduce

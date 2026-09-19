@@ -1,8 +1,8 @@
 # Chinese Evidence Data Engine
 
-面向**阿里巴巴 AI 数据工程师**岗位的数据工程实验项目：公开中文数据寻源 → 质量与重复审计 → Ray本地加工 → Parquet/JSONL数据资产与SQLite血缘 → 检索失败分析 → 一次切块改进 → 冻结后留出集评测。
+可恢复、可追溯的中文证据数据流水线：公开中文数据寻源 → 质量与重复审计 → Ray本地加工 → Parquet/JSONL数据资产与SQLite血缘 → 检索失败分析 → 一次切块改进 → 冻结后留出集评测。
 
-**已实际运行，不是页面演示。** 核心是可验证的数据生产与Evaluation-Driven Development（EDD）。独立公开仓库：[GitHub](https://github.com/kimzclandi/chinese-evidence-data-engine)。无付费API、云GPU、模型训练或生成式回答；指标是检索证据覆盖，**不是大模型回答准确率、CMRC官方成绩或业务收益**。
+核心是数据算子、不可变快照、血缘与评测驱动迭代（Evaluation-Driven Development）。无付费API、云GPU、模型训练或生成式回答；指标是检索证据覆盖，**不是大模型回答准确率、CMRC官方成绩或业务收益**。
 
 ## 已运行结果
 
@@ -44,10 +44,10 @@ PYTHONPATH=. .venv/bin/python scripts/verify.py
 # 真正重新执行BM25检索，再与保存排名比较；不调参、不写旧报告
 PYTHONPATH=. .venv/bin/python scripts/verify_portable.py
 # 重新加工全部语料并执行8道dev查询，输出隔离且拒绝覆盖
-PYTHONPATH=. .venv/bin/python scripts/reproduce.py --output work/reproduce-01
+PYTHONPATH=. .venv/bin/python scripts/reproduce_portable.py --output work/reproduce-01
 ```
 
-证据核验只读；reproduce是实际运行，二者不能混称。Ray故障实验已真实运行，重跑需要本机进程/端口权限。轻量CI定义使用单独requirements-ci.lock.txt；**GitHub Linux CI已通过37项测试及640条query-arm重新检索**；这不代表Ray跨机、模型推理或全流程异机复现。[发布与兼容性记录](docs/PUBLICATION.md)。
+证据核验只读；reproduce是实际运行，二者不能混称。Ray故障实验已真实运行，重跑需要本机进程/端口权限。轻量CI使用requirements-ci.lock.txt，检查测试、冻结证据与640条query-arm重新检索，并运行portable串行资产重建；这不代表Ray跨机、模型推理或全流程异机复现。[发布与兼容性记录](docs/PUBLICATION.md)。
 
 实际从固定官方源重新下载并重建抽样：
 
@@ -57,12 +57,15 @@ PYTHONPATH=. .venv/bin/python scripts/fetch_prepare.py --output work/fresh-sourc
 
 下载hash不匹配会失败，不能静默换源。正式data/reports是冻结证据，批量study脚本拒绝覆写既有轮次；不要删除旧结果来重跑。任意新工作使用work子目录。[完整复现说明](docs/REPRODUCE.md)。
 
-## 审阅路线
+## 代码与文档
 
-1. [岗位证据映射](docs/JD_EVIDENCE.md)：哪些要求有实现，哪些还没有。
-2. [真实结果](reports/RESULTS.md)：收益、回归、耗时与系统故障证据。
-3. [架构和边界](docs/ARCHITECTURE.md)：版本、幂等、容错与规模限制。
-4. [面试与学习手册](docs/INTERVIEW.md)：30秒/3分钟回答、简历、思维模型和主动回忆。
-5. [AI辅助及个人贡献边界](CONTRIBUTIONS.md)、[数据许可](DATA_LICENSE.md)。
+| 实现 | 内容 | 文档与证据 |
+|---|---|---|
+| `engine/quality.py`、`engine/dataset.py` | 质量隔离、精确去重、来源血缘、近重复家族与切分 | [数据卡](docs/DATA_CARD.md) |
+| `engine/pipeline.py` | Ray/串行执行、分片缓存、不可变快照、SQLite登记与恢复 | [架构](docs/ARCHITECTURE.md) |
+| `engine/retrieval.py` | 字符BM25、原始offset证据覆盖、配对修复/回归 | [完整结果](reports/RESULTS.md) |
+| `scripts/reproduce_portable.py`、`scripts/verify_portable.py` | 隔离重建与跨平台排名核验 | [复现指南](docs/REPRODUCE.md) |
 
-本项目与Domain QA Lab互补：前者关注数据算子、资产与检索证据生产，后者已有LoRA/蒸馏/量化实验。这里不把检索覆盖收益包装成大模型训练提升，也不声称全模态、流批一体、EB规模或生产部署。
+[AI辅助与贡献](CONTRIBUTIONS.md) · [数据许可](DATA_LICENSE.md) · [上游来源](docs/SOURCES.md) · [发布记录](docs/PUBLICATION.md)
+
+本项目关注数据资产与检索证据生产；[Domain QA Lab](https://github.com/kimzclandi/domain-qa-lab)独立研究LoRA、响应蒸馏和量化。这里的检索覆盖收益不等于大模型训练提升。实现限于单机批处理，尚未验证多机、流批一体、图像音频算子或生产部署。

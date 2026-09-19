@@ -1,6 +1,6 @@
 # 公开发布与线上验证
 
-用户明确授权后，项目公开至[GitHub](https://github.com/kimzclandi/chinese-evidence-data-engine)。发布记录日期为2026-09-19（Asia/Singapore；Actions日志为UTC前一日）。
+项目公开至[GitHub](https://github.com/kimzclandi/chinese-evidence-data-engine)。发布记录日期为2026-09-19（Asia/Singapore；Actions日志为UTC前一日）。
 
 ## 实际验证
 
@@ -17,3 +17,7 @@
 原data/、reports/、configs/与冻结源码未改写。旧报告中的“未公开”“31项测试”等为发布前快照；当前状态以README、本页和对应提交的Actions记录为准。原v1 ZIP保留其提交和哈希，不冒充新版发布包。
 
 线上执行范围为依赖安装、37项测试、保存证据核验及BM25重算。没有在线重跑Ray故障注入、全量源下载与加工，也没有训练或生成模型。因此可称“Linux异机检索验证”，不能称完整流水线异机复现、生产部署或业务效果验证。
+
+## 当前复现入口
+
+`scripts/reproduce_portable.py`在独立`work/`目录重新生成完整串行资产并执行默认8道dev查询。它复用已有有限分数容差，严格比较预测ID覆盖、排名、非计时指标及JSONL/Parquet资产字节。原`scripts/reproduce.py`仍保留冻结的精确浮点比较语义。当前CI增加portable重建；本地47项测试、640条query-arm重新检索及串行重建通过，远端状态以当前提交的Actions为准。此入口不运行Ray。
