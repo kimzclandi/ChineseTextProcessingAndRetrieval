@@ -1,5 +1,7 @@
 # Chinese Evidence Data Engine
 
+[![offline-evidence](https://github.com/kimzclandi/chinese-evidence-data-engine/actions/workflows/offline.yml/badge.svg)](https://github.com/kimzclandi/chinese-evidence-data-engine/actions/workflows/offline.yml)
+
 可恢复、可追溯的中文证据数据流水线：公开中文数据寻源 → 质量与重复审计 → Ray本地加工 → Parquet/JSONL数据资产与SQLite血缘 → 检索失败分析 → 一次切块改进 → 冻结后留出集评测。
 
 核心是数据算子、不可变快照、血缘与评测驱动迭代（Evaluation-Driven Development）。无付费API、云GPU、模型训练或生成式回答；指标是检索证据覆盖，**不是大模型回答准确率、CMRC官方成绩或业务收益**。
