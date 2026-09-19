@@ -1,7 +1,7 @@
 """Cross-platform reranking; frozen evidence and ordered IDs remain exact.
 
 Only numeric BM25 scores allow rel_tol=abs_tol=1e-12 for libm rounding.
-The original pre-holdout checker is preserved and runs first, unchanged.
+Frozen source bytes are preserved separately; evidence checks run before reranking.
 """
 import json
 import math

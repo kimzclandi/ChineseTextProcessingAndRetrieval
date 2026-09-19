@@ -43,9 +43,6 @@ def consolidate(processed):
     for doc_id, group in sorted(groups.items()):
         representative = min(group, key=lambda x:(x['source_id'], x['title']))
         docs.append({k:representative[k] for k in ('doc_id','title','title_key','text')})
-        # Repeated delivery of an identical source is one lineage edge, matching
-        # the catalog's (version, doc_id, source_id) primary key.
-        sources={row['source_id']:row for row in group}
-        for row in sorted(sources.values(), key=lambda x:x['source_id']):
+        for row in sorted(group, key=lambda x:x['source_id']):
             lineage.append({'doc_id':doc_id,'source_id':row['source_id'],'title_key':row['title_key']})
     return docs, sorted(quarantine,key=lambda x:(str(x['source_id']),x['record_hash'])), lineage

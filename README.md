@@ -69,3 +69,5 @@ PYTHONPATH=. .venv/bin/python scripts/fetch_prepare.py --output work/fresh-sourc
 [AI辅助与贡献](CONTRIBUTIONS.md) · [数据许可](DATA_LICENSE.md) · [上游来源](docs/SOURCES.md) · [发布记录](docs/PUBLICATION.md)
 
 本项目关注数据资产与检索证据生产；[Domain QA Lab](https://github.com/kimzclandi/domain-qa-lab)独立研究LoRA、响应蒸馏和量化。这里的检索覆盖收益不等于大模型训练提升。实现限于单机批处理，尚未验证多机、流批一体、图像音频算子或生产部署。
+
+[2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
