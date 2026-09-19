@@ -1,5 +1,4 @@
 """Run real fault injection and serial/Ray measurement. Synthetic fixtures are separate."""
-import argparse
 import json
 import os
 from pathlib import Path
@@ -22,20 +21,14 @@ def check(name,condition,details):
 
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,required=True)
-    args=parser.parse_args()
-    os.chdir(ROOT);out=args.output.resolve()
-    if not out.is_relative_to(ROOT/'work') or out==ROOT/'work':
-        parser.error('Use a new work/ subdirectory; frozen reports are read-only')
-    out.mkdir(parents=True,exist_ok=False)
-    work=out/'scratch';work.mkdir()
+    os.chdir(ROOT);out=ROOT/'reports/systems-v1';out.mkdir(exist_ok=False)
+    work=ROOT/'work/systems-v1';work.mkdir(exist_ok=False)
     records=read_jsonl('data/source-v1/source-records.jsonl')
     # Fixtures use reserved example.invalid and fictional identifiers; not real PII.
     fixtures=[{'source_id':f'fixture:{i}','title':f'虚构文章{i}','text':f'虚构系统测试记录{i}。队列顺序为先进先出。'} for i in range(100)]
     fixtures += [dict(fixtures[0],source_id='fixture:duplicate'),{'source_id':'fixture:email','title':'虚构','text':'联系 test@example.invalid'}, {'source_id':'fixture:empty','title':'虚构','text':''}, {'source_id':'fixture:schema','title':'虚构','text':None}]
     checks=[]
-    start=time.perf_counter();ray.init(num_cpus=4,include_dashboard=False,log_to_driver=False);startup=time.perf_counter()-start
+    start=time.perf_counter();ray.init(num_cpus=4,include_dashboard=False,log_to_driver=False,_temp_dir='/tmp/ced-ray-systems');startup=time.perf_counter()-start
     try:
         marker=work/'worker-exited';fault=run(fixtures,work/'fault-lake','ray',fault_marker=marker)
         clean=run(fixtures,work/'clean-lake','serial')
@@ -46,8 +39,8 @@ def main():
         # Real subprocess exits after staged shard cache, before version visibility.
         from engine.common import write_jsonl
         write_jsonl(work/'fixtures.jsonl',fixtures)
-        code='''import os,sys\nfrom engine.common import read_jsonl\nfrom engine.pipeline import run\ntry: run(read_jsonl(sys.argv[1]),sys.argv[2],fail_after=2)\nexcept RuntimeError: os._exit(74)\n'''
-        child=subprocess.run([sys.executable,'-c',code,str(work/'fixtures.jsonl'),str(work/'resume-lake')],cwd=ROOT)
+        code='''import os\nfrom engine.common import read_jsonl\nfrom engine.pipeline import run\ntry: run(read_jsonl("work/systems-v1/fixtures.jsonl"),"work/systems-v1/resume-lake",fail_after=2)\nexcept RuntimeError: os._exit(74)\n'''
+        child=subprocess.run([sys.executable,'-c',code],cwd=ROOT)
         lake=work/'resume-lake'
         visible_before=len(list((lake/'versions').glob('*'))) if (lake/'versions').exists() else 0
         recovered=run(fixtures,lake)
@@ -76,7 +69,7 @@ def main():
             snapshot=registered_snapshot(work/f'benchmark-{n}-{executor}',r['version'])
             runs.append({'order':n+1,'executor':executor,'wall_seconds':wall,'rows_per_second':len(records)/wall,'documents_sha256':sha(snapshot/'documents.jsonl'),'pipeline':r})
         if len({r['documents_sha256'] for r in runs})!=1:raise ValueError('Benchmark output mismatch')
-        write_json(out/'result.json',{'executed_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'source_sha256':{str(p.relative_to(ROOT)):sha(p) for p in sorted((ROOT/'engine').glob('*.py'))},'checks':checks,'ray_startup_seconds':startup,'benchmark':runs,'median_rows_per_second':{e:statistics.median(r['rows_per_second'] for r in runs if r['executor']==e) for e in ['serial','ray']},'scope':'single-host warm runtime, end-to-end local pipeline incl disk writes; Ray init separately reported. No multi-node, streaming, memory or model training benchmark.','synthetic_fixture_records':len(fixtures),'real_source_records':len(records),'ray_version':ray.__version__})
+        write_json(out/'result.json',{'checks':checks,'ray_startup_seconds':startup,'benchmark':runs,'median_rows_per_second':{e:statistics.median(r['rows_per_second'] for r in runs if r['executor']==e) for e in ['serial','ray']},'scope':'single-host warm runtime, end-to-end local pipeline incl disk writes; Ray init separately reported. No multi-node, streaming, memory or model training benchmark.','synthetic_fixture_records':len(fixtures),'real_source_records':len(records),'ray_version':ray.__version__})
         print(json.dumps({'checks':[x['name'] for x in checks],'runs':len(runs)},indent=2))
     finally:ray.shutdown()
 

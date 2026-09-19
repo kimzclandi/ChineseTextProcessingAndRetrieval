@@ -1,0 +1,69 @@
+{
+  "scope": "same-host serial, 2403 records, fresh lakes, alternating order; excludes interpreter/import startup; no performance tuning",
+  "results": [
+    {
+      "variant": "before",
+      "order": 1,
+      "rows": 2403,
+      "seconds": 0.29183533399918815,
+      "rows_per_second": 8234.095464282214,
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "snapshot_bytes": 6221819,
+      "version": "acbf7d7e17c86683b005187c"
+    },
+    {
+      "variant": "after",
+      "order": 2,
+      "rows": 2403,
+      "seconds": 0.3094467499977327,
+      "rows_per_second": 7765.4717653929365,
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "snapshot_bytes": 6390152,
+      "version": "629dbe4b3318ee4e11243805"
+    },
+    {
+      "variant": "after",
+      "order": 3,
+      "rows": 2403,
+      "seconds": 0.30339991599612404,
+      "rows_per_second": 7920.239503397551,
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "snapshot_bytes": 6390152,
+      "version": "629dbe4b3318ee4e11243805"
+    },
+    {
+      "variant": "before",
+      "order": 4,
+      "rows": 2403,
+      "seconds": 0.2967090000020107,
+      "rows_per_second": 8098.844322159811,
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "snapshot_bytes": 6221819,
+      "version": "acbf7d7e17c86683b005187c"
+    },
+    {
+      "variant": "before",
+      "order": 5,
+      "rows": 2403,
+      "seconds": 0.3046897500025807,
+      "rows_per_second": 7886.710990375117,
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "snapshot_bytes": 6221819,
+      "version": "acbf7d7e17c86683b005187c"
+    },
+    {
+      "variant": "after",
+      "order": 6,
+      "rows": 2403,
+      "seconds": 0.30523304200323764,
+      "rows_per_second": 7872.673234290641,
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "snapshot_bytes": 6390152,
+      "version": "629dbe4b3318ee4e11243805"
+    }
+  ],
+  "median_seconds": {
+    "before": 0.2967090000020107,
+    "after": 0.30523304200323764
+  }
+}

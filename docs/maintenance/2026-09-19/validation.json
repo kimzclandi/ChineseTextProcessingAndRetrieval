@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-19",
+  "base_commit": "7bdc617a982839a5ba5b248ffae64ed0d7d41f40",
+  "scope": "Local maintenance verification; no remote CI for this unpushed change and no new model quality claim",
+  "tests_passed": 53,
+  "checks": [
+    {
+      "command": ".venv/bin/python -m pytest -q",
+      "returncode": 0
+    },
+    {
+      "command": "env PYTHONPATH=. .venv/bin/python scripts/verify.py",
+      "returncode": 0
+    },
+    {
+      "command": "env PYTHONPATH=. .venv/bin/python scripts/verify_portable.py",
+      "returncode": 0
+    },
+    {
+      "command": "env PYTHONPATH=. .venv/bin/python scripts/reproduce_portable.py --output work/final-reproduce",
+      "returncode": 0
+    }
+  ],
+  "changed_python_sha256": {
+    "engine/pipeline.py": "0b7a77e4a1363b45fea5bd1f9e7ef8ca5a34d8f7e98da16dbad7819ce8d5f846",
+    "engine/quality.py": "8c7fb374c156aac9520fcfaf71fd117c3ea3eb0e11124145fdd04337eaad3e8f",
+    "scripts/systems.py": "5e0b3ac2f91bf1cce71e1fba589c5d3ebc92be7685a3714cb43061c6adec506c",
+    "scripts/verify.py": "69a60855c59cf74d3e3c393ebb40720345cb4e260af98674dc715c3b8f19a1c4",
+    "tests/test_incremental_contract.py": "185f3c2e5ffd01b734a4bd7b9151d8066ed4726808f9e5503f42f1f061d0f9aa",
+    "scripts/verify_portable.py": "12a77d5c885f26fb7f649313f09e727267a8aeac47da51ebc880139d9f4519d0"
+  }
+}

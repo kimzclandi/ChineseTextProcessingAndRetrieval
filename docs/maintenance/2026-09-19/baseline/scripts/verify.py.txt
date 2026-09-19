@@ -14,13 +14,6 @@ from engine.retrieval import BM25,chunks,score_query,summarize,paired
 ROOT=Path(__file__).resolve().parents[1]
 
 
-def historical_source(path):
-    # These exact pre-maintenance bytes remain bound to the original freeze.
-    if path in {'engine/pipeline.py', 'engine/quality.py', 'scripts/verify.py', 'scripts/systems.py'}:
-        return ROOT/'docs/maintenance/2026-09-19/baseline'/f'{path}.txt'
-    return ROOT/path
-
-
 def main(rerank=False):
     import os
     os.chdir(ROOT)
@@ -32,7 +25,7 @@ def main(rerank=False):
     asset=verify_snapshot('data/asset-v1');docs=read_jsonl('data/asset-v1/documents.jsonl');docmap={r['doc_id']:r for r in docs}
     protocol=json.loads(Path('configs/protocol.json').read_text());folder=Path('reports/retrieval-v1');freeze=json.loads((folder/'freeze.json').read_text())
     assert sha('configs/protocol.json')==freeze['protocol_sha256']
-    for f,h in freeze['source_sha256'].items():assert sha(historical_source(f))==h,f
+    for f,h in freeze['source_sha256'].items():assert sha(f)==h,f
     assert sha(folder/'selection.json')==freeze['selection_sha256']
     assert sha('data/source-v1/holdout.jsonl')==freeze['holdout_sha256']
     qs={s:read_jsonl(f'data/source-v1/{s}.jsonl') for s in ['dev','holdout']}

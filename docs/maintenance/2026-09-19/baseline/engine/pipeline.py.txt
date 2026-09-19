@@ -4,8 +4,6 @@ Local shared filesystem and exclusive writer lock are required. Not a streaming
 exactly-once claim, multi-host transaction, or object-store commit protocol.
 """
 import argparse
-from collections import Counter
-from contextlib import closing
 import fcntl
 import json
 import os
@@ -50,7 +48,7 @@ def verify_snapshot(folder):
 
 
 def registered_snapshot(lake, version):
-    with closing(connect(Path(lake))) as con:
+    with connect(Path(lake)) as con:
         row=con.execute('SELECT manifest_sha,path FROM versions WHERE version=?',(version,)).fetchone()
     if row is None:raise KeyError('Version not published')
     path=Path(lake)/row[1]
@@ -73,25 +71,17 @@ def run(records, lake, executor='serial', batch_size=64, fail_after=None, fault_
             if sid in seen and seen[sid]!=h:raise ValueError('Conflicting source_id: '+sid)
             seen[sid]=h
     records=sorted(records,key=digest)
-    op=operator_hash();identity={'input_hash':digest(records),'operator_hash':op,'batch_size':batch_size,'parent':parent}
+    op=operator_hash();identity={'input_hash':digest(records),'operator_hash':op,'batch_size':batch_size}
     version=digest(identity)[:24]
     destination=lake/'versions'/version;stage=lake/'staging'/version
     t0=time.perf_counter()
     lock=(lake/'writer.lock').open('a')
     try:
         fcntl.flock(lock,fcntl.LOCK_EX)
-        if parent is not None:
-            parent_path=registered_snapshot(lake,parent)
-            hashes_path=parent_path/'input-record-hashes.json'
-            if not hashes_path.exists():
-                raise ValueError('Parent lacks input identity index; rebuild as a new root snapshot')
-            previous=Counter(json.loads(hashes_path.read_text()))
-            if previous-Counter(digest(row) for row in records):
-                raise ValueError('Incremental input must be append-only: parent records removed or changed')
         if destination.exists():
             manifest=verify_snapshot(destination)
             if manifest['identity']!=identity:raise ValueError('Version identity mismatch')
-            with closing(connect(lake)) as con, con:
+            with connect(lake) as con:
                 old=con.execute('SELECT manifest_sha FROM versions WHERE version=?',(version,)).fetchone()
                 if old and old[0]!=sha(destination/'manifest.json'):raise ValueError('Catalog manifest mismatch')
                 con.execute('INSERT OR IGNORE INTO versions VALUES (?,?,?)',(version,sha(destination/'manifest.json'),str(destination.relative_to(lake))))
@@ -140,9 +130,6 @@ def run(records, lake, executor='serial', batch_size=64, fail_after=None, fault_
         rows=[r for i in range(len(batches)) for r in outputs[i]]
         docs,quarantine,lineage=consolidate(rows)
         write_jsonl(stage/'documents.jsonl',docs);write_jsonl(stage/'quarantine.jsonl',quarantine);write_jsonl(stage/'lineage.jsonl',lineage)
-        # Hash every original record, including quarantined and duplicate inputs.
-        # Parent validation must not infer source identity from deduplicated documents.
-        write_json(stage/'input-record-hashes.json',sorted(digest(row) for row in records))
         schema=pa.schema([(k,pa.string()) for k in ('doc_id','title','title_key','text')])
         pq.write_table(pa.Table.from_pylist(docs,schema=schema),stage/'documents.parquet',compression='zstd')
         manifest={'version':version,'identity':identity,'parent':parent,'counts':{'input':len(records),'accepted_rows':len(rows)-len(quarantine),'documents':len(docs),'quarantined':len(quarantine),'duplicate_rows':len(rows)-len(quarantine)-len(docs)},'files':{p.name:sha(p) for p in sorted(stage.iterdir()) if p.is_file() and p.name!='manifest.json'},'scope':'local filesystem atomic rename + SQLite registration; at-least-once work, idempotent snapshot visibility'}
@@ -153,7 +140,7 @@ def run(records, lake, executor='serial', batch_size=64, fail_after=None, fault_
         destination.parent.mkdir(exist_ok=True)
         os.rename(stage,destination)
         # A crash after rename can leave an unregistered directory; rerun verifies and registers it.
-        with closing(connect(lake)) as con, con:
+        with connect(lake) as con:
             con.execute('INSERT INTO versions VALUES (?,?,?)',(version,sha(destination/'manifest.json'),str(destination.relative_to(lake))))
             for row in lineage:
                 con.execute('INSERT OR IGNORE INTO lineage VALUES (?,?,?)',(version,row['doc_id'],row['source_id']))
