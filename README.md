@@ -1,5 +1,7 @@
 # 中文文本数据处理与检索评测
 
+**简体中文** | [English](README.en.md)
+
 ![Project wordmark](.github/project-header.svg)
 
 [![offline-evidence](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/workflows/offline.yml/badge.svg)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/workflows/offline.yml)
