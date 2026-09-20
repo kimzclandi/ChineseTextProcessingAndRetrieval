@@ -42,9 +42,20 @@ def connect(lake):
 
 def verify_snapshot(folder):
     folder=Path(folder)
+    if (folder/'manifest.json').is_symlink():raise ValueError('Snapshot manifest must be a regular file')
     manifest=json.loads((folder/'manifest.json').read_text())
-    for name,h in manifest['files'].items():
-        if Path(name).name!=name or sha(folder/name)!=h:
+    files=manifest.get('files')
+    required={'documents.jsonl','documents.parquet','quarantine.jsonl','lineage.jsonl'}
+    allowed=required|{'input-record-hashes.json'}
+    if not isinstance(files,dict) or not required<=set(files)<=allowed:
+        raise ValueError('Snapshot file contract mismatch')
+    actual={p.name for p in folder.iterdir() if p.name!='manifest.json'}
+    if actual!=set(files):raise ValueError('Snapshot file set mismatch')
+    if not isinstance(manifest.get('identity'),dict) or manifest.get('version')!=digest(manifest['identity'])[:24]:
+        raise ValueError('Snapshot version identity mismatch')
+    for name,h in files.items():
+        path=folder/name
+        if Path(name).name!=name or path.is_symlink() or not path.is_file() or sha(path)!=h:
             raise ValueError('Snapshot checksum mismatch: '+name)
     return manifest
 
