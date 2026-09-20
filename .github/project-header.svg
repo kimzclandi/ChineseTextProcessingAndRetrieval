@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="96" viewBox="0 0 640 96" role="img" aria-labelledby="title desc">
-  <title id="title">chinese-text-pipeline</title>
-  <desc id="desc">Traceable evidence data</desc>
-  <rect width="640" height="96" rx="16" fill="#0f172a"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="96" viewBox="0 0 880 96" role="img" aria-labelledby="title desc">
+  <title id="title">中文文本数据处理与检索评测</title>
+  <desc id="desc">ChineseTextProcessingAndRetrieval</desc>
+  <rect width="880" height="96" rx="16" fill="#0f172a"/>
   <rect x="16" y="16" width="64" height="64" rx="12" fill="#38bdf8"/>
   <text x="48" y="56" text-anchor="middle" font-family="sans-serif" font-size="25" font-weight="700" fill="#0f172a">CT</text>
-  <text x="100" y="43" font-family="sans-serif" font-size="23" font-weight="700" fill="#f8fafc">chinese-text-pipeline</text>
-  <text x="100" y="68" font-family="sans-serif" font-size="16" fill="#cbd5e1">Traceable evidence data</text>
+  <text x="100" y="43" font-family="sans-serif" font-size="22" font-weight="700" fill="#f8fafc">中文文本数据处理与检索评测</text>
+  <text x="100" y="68" font-family="sans-serif" font-size="16" fill="#cbd5e1">ChineseTextProcessingAndRetrieval</text>
 </svg>
