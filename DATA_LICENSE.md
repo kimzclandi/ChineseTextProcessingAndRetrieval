@@ -14,4 +14,4 @@
 
 以上许可同样覆盖data/source-v1、data/asset-v1、reports/retrieval-v1中的来源内容及其加工形式。再分发须保留归属、来源、修改说明及相同许可。系统故障fixture为程序生成的虚构内容，联系方式使用example.invalid，不是业务数据。
 
-代码、文档、许可数据与实验记录公开于https://github.com/kimzclandi/chinese-evidence-data-engine；数据再分发仍须遵守上述许可。
+代码、文档、许可数据与实验记录公开于https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval；数据再分发仍须遵守上述许可。

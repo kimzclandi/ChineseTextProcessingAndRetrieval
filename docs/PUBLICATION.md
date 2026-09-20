@@ -1,13 +1,13 @@
 # 公开发布与线上验证
 
-项目公开至[GitHub](https://github.com/kimzclandi/chinese-evidence-data-engine)。发布记录日期为2026-09-19（Asia/Singapore；Actions日志为UTC前一日）。
+项目公开至[GitHub](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval)。发布记录日期为2026-09-19（Asia/Singapore；Actions日志为UTC前一日）。
 
 ## 实际验证
 
 - 初次发布提交：f41a1ebbe68ce062b698270ca73de60b03fc8acf。
-- [首次CI失败记录](https://github.com/kimzclandi/chinese-evidence-data-engine/actions/runs/35373687737)：冻结核验器使用浮点精确相等，Linux重算在TRAIN_2286_QUERY_1报错。
+- [首次CI失败记录](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/runs/35373687737)：冻结核验器使用浮点精确相等，Linux重算在TRAIN_2286_QUERY_1报错。
 - 修复提交：bddc8512a27853eb1cbfd797251dfef3d264ecd6。
-- [修复后CI通过记录](https://github.com/kimzclandi/chinese-evidence-data-engine/actions/runs/35374050968)：Ubuntu 24.04、CPython 3.12.14，轻量锁定依赖安装成功，37项测试通过。
+- [修复后CI通过记录](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/runs/35374050968)：Ubuntu 24.04、CPython 3.12.14，轻量锁定依赖安装成功，37项测试通过。
 - 640条query-arm实际重新检索，所有有序chunk ID完全一致；1,920个分数中42个存在舍入差异，最大绝对差2.842170943040401e-14。本机同样通过37项测试与640条重算，分数差为0。
 
 新增scripts/verify_portable.py保留原核验器，先审计全部冻结哈希、数据划分、指标和门槛，再重算检索。仅有限浮点分数允许rel_tol=abs_tol=1e-12；排名改变、明显分数改变、NaN或无穷均拒绝，新增测试覆盖这些失败条件。底层libm跨平台舍入是对该现象的解释，未将容差用于指标或排名。

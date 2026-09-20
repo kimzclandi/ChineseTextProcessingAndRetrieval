@@ -1,10 +1,32 @@
-# Chinese Evidence Data Engine
+# 中文文本数据处理与检索评测
 
-[![offline-evidence](https://github.com/kimzclandi/chinese-evidence-data-engine/actions/workflows/offline.yml/badge.svg)](https://github.com/kimzclandi/chinese-evidence-data-engine/actions/workflows/offline.yml)
+![Project wordmark](.github/project-header.svg)
+
+[![offline-evidence](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/workflows/offline.yml/badge.svg)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/workflows/offline.yml)
+[![Stars](https://img.shields.io/github/stars/kimzclandi/ChineseTextProcessingAndRetrieval?style=flat)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 可恢复、可追溯的中文证据数据流水线：公开中文数据寻源 → 质量与重复审计 → Ray本地加工 → Parquet/JSONL数据资产与SQLite血缘 → 检索失败分析 → 一次切块改进 → 冻结后留出集评测。
 
 核心是数据算子、不可变快照、血缘与评测驱动迭代（Evaluation-Driven Development）。无付费API、云GPU、模型训练或生成式回答；指标是检索证据覆盖，**不是大模型回答准确率、CMRC官方成绩或业务收益**。
+
+## 功能特性 / Features
+
+- 中文质量检查、去重与来源血缘。
+- Ray / 串行加工与不可变快照。
+- 固定切分下的检索覆盖和失败分析。
+
+## 系统组成与数据流
+
+| 层次 | 输入 → 输出 | 设计取舍 |
+|---|---|---|
+| 数据质量 | 来源记录 → 合格文档、隔离原因与血缘 | 保留原文 offset；近重复合并评测家族，不盲删原文 |
+| 执行与发布 | 稳定内容分片 → 不可变快照和版本登记 | worker 可重试，最终发布幂等；单机文件系统 |
+| 检索评测 | 文本块与问题 → 排名、答案片段覆盖和失败切片 | 固定 BM25 与字符预算；答案不进入索引 |
+| 迭代验证 | 开发集诊断 → 冻结方案与留出集结果 | 同时记录修复、回归、索引和耗时成本 |
+
+## 阅读与复核路径 / Reading and verification
+
+[实验与工程复核指南](docs/EXPERIMENT_GUIDE.md)按输入输出、控制变量、指标分母、代码与证据路径组织说明，并区分保存结果核验和实际重跑。首次阅读建议先看本页结果与限制，再按指南追踪具体记录；运行前阅读对应环境和输出保护说明。
 
 ## 项目沿革（2026-09-20 补记）
 
@@ -12,7 +34,7 @@
 
 ## 已运行结果
 
-输入为固定版本CMRC2018公开train，2,403篇文段、10,142道候选问题。21道问题未通过非空/原文offset校验，在评测抽样前排除；不删除对应文段。检测到一对高相似文段并合并评测家族，最终2,402个家族。开发/留出各160题、每家族最多一题。原Domain QA Lab使用的CMRC dev只作旧来源排除，不用于本项目评分或选参。
+输入为固定版本CMRC2018公开train，2,403篇文段、10,142道候选问题。21道问题未通过非空/原文offset校验，在评测抽样前排除；不删除对应文段。检测到一对高相似文段并合并评测家族，最终2,402个家族。开发/留出各160题、每家族最多一题。原小语言模型问答微调与量化实验使用的CMRC dev只作旧来源排除，不用于本项目评分或选参。
 
 | 指标 | 不重叠160字符切块 | 160字符、步长96的重叠切块 |
 |---|---:|---:|
@@ -38,13 +60,24 @@
 
 真实语料没有精确重复或联系方式规则命中，因此不宣称清洗删除率带来模型收益。近重复只合并评测家族，不盲删不同原文及其offset。规则隔离的PII边界见[数据卡](docs/DATA_CARD.md)。
 
-## 快速开始
+## 快速开始 / Quick Start
 
 Python3.12，完整锁在macOS arm64实测。无模型、API key或GPU要求；首次安装依赖需要网络。建议预留1GB磁盘；未测最低硬件配置。必须在源码根目录运行，不用`python -O`。
 
+### Installation / 安装
+
+需要先安装 [uv](https://docs.astral.sh/uv/getting-started/installation/)；以下命令在仓库根目录执行。
+
 ```bash
+git clone https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval.git
+cd ChineseTextProcessingAndRetrieval
 uv venv .venv --python 3.12
 uv pip install --python .venv/bin/python -r requirements.lock.txt
+```
+
+### Usage / 使用示例
+
+```bash
 .venv/bin/python -m pytest -q
 PYTHONPATH=. .venv/bin/python scripts/verify.py
 # 真正重新执行BM25检索，再与保存排名比较；不调参、不写旧报告
@@ -74,8 +107,20 @@ PYTHONPATH=. .venv/bin/python scripts/fetch_prepare.py --output work/fresh-sourc
 
 [AI辅助与贡献](CONTRIBUTIONS.md) · [数据许可](DATA_LICENSE.md) · [上游来源](docs/SOURCES.md) · [发布记录](docs/PUBLICATION.md)
 
-本项目关注数据资产与检索证据生产；[Domain QA Lab](https://github.com/kimzclandi/domain-qa-lab)独立研究LoRA、响应蒸馏和量化。这里的检索覆盖收益不等于大模型训练提升。实现限于单机批处理，尚未验证多机、流批一体、图像音频算子或生产部署。
+本项目关注数据资产与检索证据生产；[小语言模型问答微调与量化实验](https://github.com/kimzclandi/SmallModelQAFinetuningAndQuantization)独立研究LoRA、响应蒸馏和量化。这里的检索覆盖收益不等于大模型训练提升。实现限于单机批处理，尚未验证多机、流批一体、图像音频算子或生产部署。
 
 [2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
 
 [2026-09-21 工程维护与验证](docs/maintenance/2026-09-21/README.md)
+
+## Contributing / 参与贡献
+
+[贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [结构与维护](docs/MAINTAINING.md)
+
+[反馈问题](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/issues/new?template=feature_request.yml)
+
+## License
+
+Project code: [MIT](LICENSE). Data and derived assets: [data licensing and attribution](DATA_LICENSE.md).
+
+[项目名称与兼容性说明 / Naming and compatibility](docs/NAMING.md)
