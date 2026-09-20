@@ -1,0 +1,186 @@
+{
+  "benchmark": [
+    {
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "executor": "serial",
+      "order": 1,
+      "pipeline": {
+        "processed_shards": 256,
+        "resumed_shards": 0,
+        "reused_snapshot": false,
+        "version": "d6f476cd5bffb86d52766ce8",
+        "wall_seconds": 0.1890077919961186
+      },
+      "rows_per_second": 11294.759078535893,
+      "wall_seconds": 0.21275354200042784
+    },
+    {
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "executor": "ray",
+      "order": 2,
+      "pipeline": {
+        "processed_shards": 256,
+        "resumed_shards": 0,
+        "reused_snapshot": false,
+        "version": "d6f476cd5bffb86d52766ce8",
+        "wall_seconds": 0.29396983300102875
+      },
+      "rows_per_second": 7536.187341614091,
+      "wall_seconds": 0.3188614999962738
+    },
+    {
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "executor": "ray",
+      "order": 3,
+      "pipeline": {
+        "processed_shards": 256,
+        "resumed_shards": 0,
+        "reused_snapshot": false,
+        "version": "d6f476cd5bffb86d52766ce8",
+        "wall_seconds": 0.26975370799482334
+      },
+      "rows_per_second": 8205.822826093361,
+      "wall_seconds": 0.29284083399397787
+    },
+    {
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "executor": "serial",
+      "order": 4,
+      "pipeline": {
+        "processed_shards": 256,
+        "resumed_shards": 0,
+        "reused_snapshot": false,
+        "version": "d6f476cd5bffb86d52766ce8",
+        "wall_seconds": 0.1680605830042623
+      },
+      "rows_per_second": 12652.892939991667,
+      "wall_seconds": 0.18991704200743698
+    },
+    {
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "executor": "serial",
+      "order": 5,
+      "pipeline": {
+        "processed_shards": 256,
+        "resumed_shards": 0,
+        "reused_snapshot": false,
+        "version": "d6f476cd5bffb86d52766ce8",
+        "wall_seconds": 0.16365741699701175
+      },
+      "rows_per_second": 12868.965849750843,
+      "wall_seconds": 0.1867282909952337
+    },
+    {
+      "documents_sha256": "f788f86bc26fecc49f164eed0bfeaf173c6b0eb339d8244a827c5cfb7045688e",
+      "executor": "ray",
+      "order": 6,
+      "pipeline": {
+        "processed_shards": 256,
+        "resumed_shards": 0,
+        "reused_snapshot": false,
+        "version": "d6f476cd5bffb86d52766ce8",
+        "wall_seconds": 0.24423341600049753
+      },
+      "rows_per_second": 9020.741488997875,
+      "wall_seconds": 0.2663860839966219
+    }
+  ],
+  "checks": [
+    {
+      "details": {
+        "clean_version": "b7039aa9f41428e50584ebd7",
+        "counts": {
+          "accepted_rows": 101,
+          "documents": 100,
+          "duplicate_rows": 1,
+          "input": 104,
+          "quarantined": 3
+        },
+        "exit_code": 73,
+        "fault_marker": "worker intentionally exited once\n",
+        "fault_version": "b7039aa9f41428e50584ebd7"
+      },
+      "name": "real_worker_exit_retried",
+      "passed": true
+    },
+    {
+      "details": {
+        "processed_shards": 0,
+        "resumed_shards": 0,
+        "reused_snapshot": true,
+        "version": "b7039aa9f41428e50584ebd7",
+        "wall_seconds": 0.0007626250007888302
+      },
+      "name": "duplicate_delivery_idempotent",
+      "passed": true
+    },
+    {
+      "details": {
+        "child_exit": 74,
+        "recovery": {
+          "processed_shards": 82,
+          "resumed_shards": 2,
+          "reused_snapshot": false,
+          "version": "b7039aa9f41428e50584ebd7",
+          "wall_seconds": 0.02017608300957363
+        },
+        "visible_before_resume": 0
+      },
+      "name": "driver_exit_resume",
+      "passed": true
+    },
+    {
+      "details": {
+        "full": {
+          "processed_shards": 85,
+          "resumed_shards": 0,
+          "reused_snapshot": false,
+          "version": "7d74639cfc62847ad2668fb8",
+          "wall_seconds": 0.01941120799165219
+        },
+        "incremental": {
+          "processed_shards": 1,
+          "resumed_shards": 84,
+          "reused_snapshot": false,
+          "version": "ecdfa915adcc42ad39ef156e",
+          "wall_seconds": 0.008071958989603445
+        },
+        "parent_preserved": true
+      },
+      "name": "incremental_equal_full_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+        "corruption": "append invalid row to copied snapshot"
+      },
+      "name": "tamper_rejected",
+      "passed": true
+    },
+    {
+      "details": {
+        "simulation": "catalog registration removed from fixture; not a hardware power-loss test"
+      },
+      "name": "orphan_publish_recovery",
+      "passed": true
+    }
+  ],
+  "executed_utc": "2026-09-20T16:40:10Z",
+  "median_rows_per_second": {
+    "ray": 8205.822826093361,
+    "serial": 12652.892939991667
+  },
+  "ray_startup_seconds": 2.034919957994134,
+  "ray_version": "2.54.0",
+  "real_source_records": 2403,
+  "scope": "single-host warm runtime, end-to-end local pipeline incl disk writes; Ray init separately reported. No multi-node, streaming, memory or model training benchmark.",
+  "source_sha256": {
+    "engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine/common.py": "9e84a4a4fc50521ba0901c1d613a53203c52f239e639ffb8d5ac3248f1cdedc0",
+    "engine/dataset.py": "ffbfbb0354a53166536da2440b5fb58a2615cc764a51e88d6841db5d149b4e4d",
+    "engine/pipeline.py": "e63c2aeccf841391cef60dffd4b45d10c192cba411fc24a5eb26e1188eac705d",
+    "engine/quality.py": "8c7fb374c156aac9520fcfaf71fd117c3ea3eb0e11124145fdd04337eaad3e8f",
+    "engine/retrieval.py": "13f465eda16cc92a17369215e212a1066e4b926f8572f53046be659994672c7e"
+  },
+  "synthetic_fixture_records": 104
+}

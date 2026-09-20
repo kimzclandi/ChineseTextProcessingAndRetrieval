@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-21",
+  "scope": "New engineering validation; no new model-quality experiment",
+  "tests_passed": 58,
+  "before": "旧快照校验器只检查清单中列出的文件；删掉必需文件条目、加入额外文件、将数据文件替换为符号链接或改写版本身份，都可能被接受。",
+  "change": "校验必需文件、精确目录清单、普通文件及 identity/version 一致性。损坏的未登记快照不能在重试时进入目录表。旧版缺少 input-record-hashes.json 的快照仍可只读校验，但不能作为增量父版本。",
+  "validation": "6项单机Ray/驱动退出/重复投递/增量/篡改/孤立快照恢复检查通过；640个查询变体、1920个BM25分数与保存记录一致。完整数据资产重建通过。"
+}
