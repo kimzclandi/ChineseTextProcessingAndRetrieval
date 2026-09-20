@@ -1,9 +1,9 @@
-# Chinese Evidence Data Engine
+# Chinese Text Pipeline
 
 ![Project wordmark](.github/project-header.svg)
 
-[![offline-evidence](https://github.com/kimzclandi/chinese-evidence-data-engine/actions/workflows/offline.yml/badge.svg)](https://github.com/kimzclandi/chinese-evidence-data-engine/actions/workflows/offline.yml)
-[![Stars](https://img.shields.io/github/stars/kimzclandi/chinese-evidence-data-engine?style=flat)](https://github.com/kimzclandi/chinese-evidence-data-engine/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![offline-evidence](https://github.com/kimzclandi/chinese-text-pipeline/actions/workflows/offline.yml/badge.svg)](https://github.com/kimzclandi/chinese-text-pipeline/actions/workflows/offline.yml)
+[![Stars](https://img.shields.io/github/stars/kimzclandi/chinese-text-pipeline?style=flat)](https://github.com/kimzclandi/chinese-text-pipeline/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 可恢复、可追溯的中文证据数据流水线：公开中文数据寻源 → 质量与重复审计 → Ray本地加工 → Parquet/JSONL数据资产与SQLite血缘 → 检索失败分析 → 一次切块改进 → 冻结后留出集评测。
 
@@ -21,7 +21,7 @@
 
 ## 已运行结果
 
-输入为固定版本CMRC2018公开train，2,403篇文段、10,142道候选问题。21道问题未通过非空/原文offset校验，在评测抽样前排除；不删除对应文段。检测到一对高相似文段并合并评测家族，最终2,402个家族。开发/留出各160题、每家族最多一题。原Domain QA Lab使用的CMRC dev只作旧来源排除，不用于本项目评分或选参。
+输入为固定版本CMRC2018公开train，2,403篇文段、10,142道候选问题。21道问题未通过非空/原文offset校验，在评测抽样前排除；不删除对应文段。检测到一对高相似文段并合并评测家族，最终2,402个家族。开发/留出各160题、每家族最多一题。原Extractive QA使用的CMRC dev只作旧来源排除，不用于本项目评分或选参。
 
 | 指标 | 不重叠160字符切块 | 160字符、步长96的重叠切块 |
 |---|---:|---:|
@@ -56,8 +56,8 @@ Python3.12，完整锁在macOS arm64实测。无模型、API key或GPU要求；�
 需要先安装 [uv](https://docs.astral.sh/uv/getting-started/installation/)；以下命令在仓库根目录执行。
 
 ```bash
-git clone https://github.com/kimzclandi/chinese-evidence-data-engine.git
-cd chinese-evidence-data-engine
+git clone https://github.com/kimzclandi/chinese-text-pipeline.git
+cd chinese-text-pipeline
 uv venv .venv --python 3.12
 uv pip install --python .venv/bin/python -r requirements.lock.txt
 ```
@@ -94,7 +94,7 @@ PYTHONPATH=. .venv/bin/python scripts/fetch_prepare.py --output work/fresh-sourc
 
 [AI辅助与贡献](CONTRIBUTIONS.md) · [数据许可](DATA_LICENSE.md) · [上游来源](docs/SOURCES.md) · [发布记录](docs/PUBLICATION.md)
 
-本项目关注数据资产与检索证据生产；[Domain QA Lab](https://github.com/kimzclandi/domain-qa-lab)独立研究LoRA、响应蒸馏和量化。这里的检索覆盖收益不等于大模型训练提升。实现限于单机批处理，尚未验证多机、流批一体、图像音频算子或生产部署。
+本项目关注数据资产与检索证据生产；[Extractive QA](https://github.com/kimzclandi/extractive-qa)独立研究LoRA、响应蒸馏和量化。这里的检索覆盖收益不等于大模型训练提升。实现限于单机批处理，尚未验证多机、流批一体、图像音频算子或生产部署。
 
 [2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
 
@@ -104,8 +104,10 @@ PYTHONPATH=. .venv/bin/python scripts/fetch_prepare.py --output work/fresh-sourc
 
 [贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [结构与维护](docs/MAINTAINING.md)
 
-[反馈问题](https://github.com/kimzclandi/chinese-evidence-data-engine/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/chinese-evidence-data-engine/issues/new?template=feature_request.yml)
+[反馈问题](https://github.com/kimzclandi/chinese-text-pipeline/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/chinese-text-pipeline/issues/new?template=feature_request.yml)
 
 ## License
 
 Project code: [MIT](LICENSE). Data and derived assets: [data licensing and attribution](DATA_LICENSE.md).
+
+[项目名称与兼容性说明 / Naming and compatibility](docs/NAMING.md)
