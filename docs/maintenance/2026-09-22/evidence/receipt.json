@@ -16,6 +16,6 @@
     "machine": "arm64",
     "scope": "same host; reused installed dependencies, fresh isolated repository checkout"
   },
-  "log_redaction": "Absolute home paths replaced with <USER_HOME>; raw logs kept locally. ANSI colors and trailing whitespace removed from public copies.",
+  "log_redaction": "Absolute home paths replaced with <USER_HOME>; raw logs kept locally. ANSI colors and trailing whitespace removed from public copies. Follow-up redaction also replaces usernames embedded in temporary/project directory names.",
   "publication": "This receipt precedes evidence commit and draft PR; no default-branch merge."
 }

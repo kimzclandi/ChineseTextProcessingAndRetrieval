@@ -2,7 +2,7 @@ FFF                                                                      [100%]
 =================================== FAILURES ===================================
 __________ test_staging_fault_is_rejected_before_publish[extra_file] ___________
 
-tmp_path = PosixPath('/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected0')
+tmp_path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-15/test_staging_fault_is_rejected0')
 fault = 'extra_file'
 
     @pytest.mark.parametrize('fault', ['extra_file', 'symlink', 'directory'])
@@ -25,7 +25,7 @@ E       Failed: DID NOT RAISE <class 'ValueError'>
 tests/test_staging_publish.py:21: Failed
 ____________ test_staging_fault_is_rejected_before_publish[symlink] ____________
 
-tmp_path = PosixPath('/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected1')
+tmp_path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-15/test_staging_fault_is_rejected1')
 fault = 'symlink'
 
     @pytest.mark.parametrize('fault', ['extra_file', 'symlink', 'directory'])
@@ -48,7 +48,7 @@ E       Failed: DID NOT RAISE <class 'ValueError'>
 tests/test_staging_publish.py:21: Failed
 ___________ test_staging_fault_is_rejected_before_publish[directory] ___________
 
-tmp_path = PosixPath('/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected2')
+tmp_path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-15/test_staging_fault_is_rejected2')
 fault = 'directory'
 
     @pytest.mark.parametrize('fault', ['extra_file', 'symlink', 'directory'])
@@ -79,7 +79,7 @@ engine/common.py:30: in write_jsonl
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = PosixPath('/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected2/staging/c116be5560b99aa583702423/documents.jsonl')
+self = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-15/test_staging_fault_is_rejected2/staging/c116be5560b99aa583702423/documents.jsonl')
 mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
 
     def open(self, mode='r', buffering=-1, encoding=None,
@@ -92,7 +92,7 @@ mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
             encoding = io.text_encoding(encoding)
 >       return io.open(self, mode, buffering, encoding, errors, newline)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-E       IsADirectoryError: [Errno 21] Is a directory: '/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected2/staging/c116be5560b99aa583702423/documents.jsonl'
+E       IsADirectoryError: [Errno 21] Is a directory: '<TEMP>/pytest-of-<LOCAL_USER>/pytest-15/test_staging_fault_is_rejected2/staging/c116be5560b99aa583702423/documents.jsonl'
 
 <USER_HOME>/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: IsADirectoryError
 =========================== short test summary info ============================

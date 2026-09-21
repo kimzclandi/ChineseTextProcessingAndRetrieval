@@ -1,14 +1,14 @@
 {
   "chinese-baseline-tests.log": "c3814a1c566fd60799f0a1803fd8a932b334b8b2aa6eb430cea35c85648ab1e3",
-  "chinese-failure-before.log": "32ffadf19e1a3e17d95bddd046a7419a8ac2a4e3dc54b2ca9fd68e198138cb3b",
+  "chinese-failure-before.log": "077f017bc8cdfdd11c090b2acd81ab9d9b15283a2fcb56fc371d7491b7179d1e",
   "chinese-portable.log": "0502ec689c817e8bb281e83cdc8c3166eddee7e06fcb815ee0286e091dd1898d",
-  "chinese-ray-after.log": "0833f671364f4227ec985376ee9414d98c155c4a5fe9d5848df0f92fc66a2ba3",
-  "chinese-ray-final.log": "af31c38a201370df55f670d5fc1f265818aee667059e11eb77bb85f50c1c9fa4",
-  "chinese-ray.log": "640647c6fe98fe880859ed97d2b44805b11bdf6820d7f3bfc6852773cbe9a5ee",
+  "chinese-ray-after.log": "261406da60386021d3c393b47f81265f6ab8621cdc28f91d0f33db5bd91582fe",
+  "chinese-ray-final.log": "e0fa7cc849a59a7410d3d6c9d193a2b1b4f7dcb9de6090f420dd01d93f3a9b25",
+  "chinese-ray.log": "3cc65de927a65e5aff79d2420d263b161771a62a55ea4c35b1e0e9f21a6f50d0",
   "chinese-rebuild.log": "1c909eea32fd9445d2e7263af6abacd3f2c1ff66e85ed80c04b1c74ddf841ee6",
   "chinese-tests-after.log": "2c40838668844915b9869a1ca712630bbe100e8de4ca021be50d26b9625bce82",
   "commands.json": "da1a2603e6ca01b058739bd094f854362216109f0a19b1f6f07c7eac0e78d2ac",
   "executor-parity.json": "6eb22ca7b0c190492f07ce151fe7f9c85adc878994ebbf56012741270f0a09f4",
   "rebuild.json": "2722a94df36244ab79f8185aada59060a319cf2aff706f507a03e45f5fe18c96",
-  "receipt.json": "6d0559e7156392cb702b048d4b5f7b2565abb97ae30e293a5f6c7b8eb6868d04"
+  "receipt.json": "439debea0630cc102b7385ab219e75309751b460c5d77c7d5450523f7f9ce1de"
 }
