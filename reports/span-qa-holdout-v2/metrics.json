@@ -1,0 +1,402 @@
+{
+  "json": {
+    "n": 44,
+    "positive_n": 32,
+    "negative_n": 12,
+    "answerable_exact_matches": 5,
+    "retrieval_hits": 27,
+    "false_refusals": 17,
+    "negative_false_answers": 3,
+    "answered": 18,
+    "valid_quotes": 18,
+    "reference_supported": 7,
+    "model_calls": 44,
+    "mean_seconds": 1.4642776779769933,
+    "failures": [
+      {
+        "id": "TRAIN_3503_QUERY_2",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_2071_QUERY_4",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_2252_QUERY_3",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_1667_QUERY_1",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_688_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_1175_QUERY_0",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_2077_QUERY_1",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_2162_QUERY_0",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_2617_QUERY_2",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_174_QUERY_0",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3507_QUERY_1",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_1579_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_347_QUERY_4",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3719_QUERY_2",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_792_QUERY_0",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_802_QUERY_2",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_2203_QUERY_3",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_2428_QUERY_0",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_3775_QUERY_4",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_436_QUERY_1",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_2141_QUERY_0",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_2726_QUERY_0",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3038_QUERY_1",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_1504_QUERY_0",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_108_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_2037_QUERY_2",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_59_QUERY_3",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_2055_QUERY_4",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_1122_QUERY_2",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_1682_QUERY_3",
+        "reason": "invalid_json"
+      }
+    ]
+  },
+  "span": {
+    "n": 44,
+    "positive_n": 32,
+    "negative_n": 12,
+    "answerable_exact_matches": 4,
+    "retrieval_hits": 27,
+    "false_refusals": 17,
+    "negative_false_answers": 1,
+    "answered": 16,
+    "valid_quotes": 16,
+    "reference_supported": 6,
+    "model_calls": 44,
+    "mean_seconds": 0.9395996420457364,
+    "failures": [
+      {
+        "id": "TRAIN_3503_QUERY_2",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_2071_QUERY_4",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_2252_QUERY_3",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_2679_QUERY_1",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_1667_QUERY_1",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_688_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_1175_QUERY_0",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_2077_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_2617_QUERY_2",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3762_QUERY_0",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_174_QUERY_0",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3507_QUERY_1",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_1579_QUERY_1",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_347_QUERY_4",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3672_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_792_QUERY_0",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_802_QUERY_2",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_2203_QUERY_3",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_2428_QUERY_0",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_436_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_2141_QUERY_0",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_2726_QUERY_0",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_3038_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_1504_QUERY_0",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_108_QUERY_1",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_2037_QUERY_2",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_59_QUERY_3",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_2308_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_1122_QUERY_2",
+        "reason": "quoted"
+      }
+    ]
+  },
+  "verified_span": {
+    "n": 44,
+    "positive_n": 32,
+    "negative_n": 12,
+    "answerable_exact_matches": 3,
+    "retrieval_hits": 27,
+    "false_refusals": 25,
+    "negative_false_answers": 0,
+    "answered": 7,
+    "valid_quotes": 7,
+    "reference_supported": 5,
+    "model_calls": 60,
+    "mean_seconds": 1.0115251515003778,
+    "failures": [
+      {
+        "id": "TRAIN_3503_QUERY_2",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_2071_QUERY_4",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_2252_QUERY_3",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_2679_QUERY_1",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_1667_QUERY_1",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_688_QUERY_1",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_1175_QUERY_0",
+        "reason": "verifier_rejected"
+      },
+      {
+        "id": "TRAIN_2077_QUERY_1",
+        "reason": "verifier_rejected"
+      },
+      {
+        "id": "TRAIN_2617_QUERY_2",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3762_QUERY_0",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_174_QUERY_0",
+        "reason": "verifier_rejected"
+      },
+      {
+        "id": "TRAIN_3507_QUERY_1",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_1579_QUERY_1",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_347_QUERY_4",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_2047_QUERY_1",
+        "reason": "verifier_rejected"
+      },
+      {
+        "id": "TRAIN_3672_QUERY_1",
+        "reason": "verifier_rejected"
+      },
+      {
+        "id": "TRAIN_792_QUERY_0",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_802_QUERY_2",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_2203_QUERY_3",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_2428_QUERY_0",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_436_QUERY_1",
+        "reason": "verifier_rejected"
+      },
+      {
+        "id": "TRAIN_2141_QUERY_0",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_2726_QUERY_0",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_3038_QUERY_1",
+        "reason": "verifier_rejected"
+      },
+      {
+        "id": "TRAIN_1504_QUERY_0",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_108_QUERY_1",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_2037_QUERY_2",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_59_QUERY_3",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_1122_QUERY_2",
+        "reason": "verifier_rejected"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "python": "3.12.11",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "source_sha256": {
+    "engine/answering.py": "9c452027e7d20b98e6ee00d352112478a1ec58bcd2368837400581ef6195f92f",
+    "engine/span_answering.py": "51df682c78dc8052e2eba43192f7bc017e773dcfe29209687a1803da3a2319e4",
+    "/Users/yukaiyan/Documents/Codex/2026-09-19/ai-jd-1-umi-ego-github/work/deepen-20260921/ChineseTextProcessingAndRetrieval/scripts/evaluate_span_qa.py": "5b4d790b8ef0c51dab506d58f8458a58c801108c029762f029a4e6a347d7d193"
+  },
+  "weights_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+}
