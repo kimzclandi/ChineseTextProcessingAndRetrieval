@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "<USER_HOME>/Documents/Codex/2026-09-22/github-readme-id-a194498-1-2/work/chinese-evidence-data-engine/../check_ray_parity.py", line 10, in <module>
+    ray.init(num_cpus=2,include_dashboard=False,object_store_memory=100*1024*1024,_temp_dir='/tmp/agent-data-parity-20260922')
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-yukaiyan/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-yukaiyan/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1795, in init
+    runtime_env = _maybe_modify_runtime_env(runtime_env, _skip_env_hook)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-yukaiyan/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1399, in _maybe_modify_runtime_env
+    cmdline = _get_uv_run_cmdline()
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-yukaiyan/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/runtime_env/uv_runtime_env_hook.py", line 282, in _get_uv_run_cmdline
+    parents = psutil.Process().parents()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-yukaiyan/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/thirdparty_files/psutil/__init__.py", line 619, in parents
+    proc = self.parent()
+           ^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-yukaiyan/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/thirdparty_files/psutil/__init__.py", line 597, in parent
+    lowest_pid = _LOWEST_PID if _LOWEST_PID is not None else pids()[0]
+                                                             ^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-yukaiyan/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/thirdparty_files/psutil/__init__.py", line 1485, in pids
+    ret = sorted(_psplatform.pids())
+                 ^^^^^^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-yukaiyan/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/thirdparty_files/psutil/_psosx.py", line 320, in pids
+    ls = cext.pids()
+         ^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted (originated from sysctl() malloc 1/3)

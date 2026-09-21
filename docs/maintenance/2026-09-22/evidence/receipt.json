@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-09-21T20:14:14.350666+00:00",
+  "local_date": "2026-09-22",
+  "timezone": "Asia/Singapore",
+  "source_commit": "cc2c79e8fa86bc5cc2c5ca68784129e3007e2191",
+  "source_tree": "691675e60aef8c1d523d3e9adc9fdcf99ea69295",
+  "baseline_commit": "eb84799cda8c092c51ae0bc60cc03839dff5ca2d",
+  "baseline_default_commit": "eb84799cda8c092c51ae0bc60cc03839dff5ca2d",
+  "remote": "https://github.com/kimzclandi/chinese-evidence-data-engine.git",
+  "original_checkout_clean": true,
+  "protected_files_checked": 88,
+  "protected_files_changed": [],
+  "environment": {
+    "os": "Darwin",
+    "release": "27.0.0",
+    "machine": "arm64",
+    "scope": "same host; reused installed dependencies, fresh isolated repository checkout"
+  },
+  "log_redaction": "Absolute home paths replaced with <USER_HOME>; raw logs kept locally. ANSI colors and trailing whitespace removed from public copies.",
+  "publication": "This receipt precedes evidence commit and draft PR; no default-branch merge."
+}

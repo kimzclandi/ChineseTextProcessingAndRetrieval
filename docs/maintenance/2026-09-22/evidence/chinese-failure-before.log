@@ -1,0 +1,102 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+__________ test_staging_fault_is_rejected_before_publish[extra_file] ___________
+
+tmp_path = PosixPath('/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected0')
+fault = 'extra_file'
+
+    @pytest.mark.parametrize('fault', ['extra_file', 'symlink', 'directory'])
+    def test_staging_fault_is_rejected_before_publish(tmp_path, fault):
+        with pytest.raises(RuntimeError):
+            run(ROWS, tmp_path, fail_after=1)
+        stage = next((tmp_path / 'staging').iterdir())
+        outside = tmp_path / 'outside.txt'
+        outside.write_text('must remain unchanged')
+        if fault == 'extra_file':
+            (stage / 'unexpected.txt').write_text('unexpected')
+        elif fault == 'symlink':
+            (stage / 'documents.jsonl').symlink_to(outside)
+        else:
+            (stage / 'documents.jsonl').mkdir()
+>       with pytest.raises(ValueError, match='Staging'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_staging_publish.py:21: Failed
+____________ test_staging_fault_is_rejected_before_publish[symlink] ____________
+
+tmp_path = PosixPath('/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected1')
+fault = 'symlink'
+
+    @pytest.mark.parametrize('fault', ['extra_file', 'symlink', 'directory'])
+    def test_staging_fault_is_rejected_before_publish(tmp_path, fault):
+        with pytest.raises(RuntimeError):
+            run(ROWS, tmp_path, fail_after=1)
+        stage = next((tmp_path / 'staging').iterdir())
+        outside = tmp_path / 'outside.txt'
+        outside.write_text('must remain unchanged')
+        if fault == 'extra_file':
+            (stage / 'unexpected.txt').write_text('unexpected')
+        elif fault == 'symlink':
+            (stage / 'documents.jsonl').symlink_to(outside)
+        else:
+            (stage / 'documents.jsonl').mkdir()
+>       with pytest.raises(ValueError, match='Staging'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_staging_publish.py:21: Failed
+___________ test_staging_fault_is_rejected_before_publish[directory] ___________
+
+tmp_path = PosixPath('/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected2')
+fault = 'directory'
+
+    @pytest.mark.parametrize('fault', ['extra_file', 'symlink', 'directory'])
+    def test_staging_fault_is_rejected_before_publish(tmp_path, fault):
+        with pytest.raises(RuntimeError):
+            run(ROWS, tmp_path, fail_after=1)
+        stage = next((tmp_path / 'staging').iterdir())
+        outside = tmp_path / 'outside.txt'
+        outside.write_text('must remain unchanged')
+        if fault == 'extra_file':
+            (stage / 'unexpected.txt').write_text('unexpected')
+        elif fault == 'symlink':
+            (stage / 'documents.jsonl').symlink_to(outside)
+        else:
+            (stage / 'documents.jsonl').mkdir()
+        with pytest.raises(ValueError, match='Staging'):
+>           run(ROWS, tmp_path)
+
+tests/test_staging_publish.py:22:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+engine/pipeline.py:153: in run
+    write_jsonl(stage/'documents.jsonl',docs);write_jsonl(stage/'quarantine.jsonl',quarantine);write_jsonl(stage/'lineage.jsonl',lineage)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+engine/common.py:30: in write_jsonl
+    Path(path).write_text(''.join(stable(r)+'\n' for r in rows))
+<USER_HOME>/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1047: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = PosixPath('/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected2/staging/c116be5560b99aa583702423/documents.jsonl')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       IsADirectoryError: [Errno 21] Is a directory: '/private/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/pytest-of-yukaiyan/pytest-15/test_staging_fault_is_rejected2/staging/c116be5560b99aa583702423/documents.jsonl'
+
+<USER_HOME>/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: IsADirectoryError
+=========================== short test summary info ============================
+FAILED tests/test_staging_publish.py::test_staging_fault_is_rejected_before_publish[extra_file]
+FAILED tests/test_staging_publish.py::test_staging_fault_is_rejected_before_publish[symlink]
+FAILED tests/test_staging_publish.py::test_staging_fault_is_rejected_before_publish[directory]
+3 failed in 0.22s
