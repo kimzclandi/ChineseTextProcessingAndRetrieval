@@ -109,7 +109,15 @@ def run(records, lake, executor='serial', batch_size=64, fail_after=None, fault_
                 for row in read_jsonl(destination/'lineage.jsonl'):
                     con.execute('INSERT OR IGNORE INTO lineage VALUES (?,?,?)',(version,row['doc_id'],row['source_id']))
             return {'version':version,'reused_snapshot':True,'resumed_shards':0,'processed_shards':0,'wall_seconds':time.perf_counter()-t0}
+        # Resume only known regular output files. Never follow a stale symlink or
+        # publish incidental files left in staging after an interrupted writer.
+        stage_files={'documents.jsonl','documents.parquet','quarantine.jsonl',
+                     'lineage.jsonl','input-record-hashes.json','manifest.json'}
+        if stage.is_symlink():raise ValueError('Staging directory must not be a symlink')
         stage.mkdir(parents=True,exist_ok=True)
+        for path in stage.iterdir():
+            if path.name not in stage_files or path.is_symlink() or not path.is_file():
+                raise ValueError('Staging file contract mismatch: '+path.name)
         (lake/'shard-cache').mkdir(exist_ok=True)
         buckets={}
         for record in records:buckets.setdefault(digest(record)[:2],[]).append(record)
@@ -162,6 +170,7 @@ def run(records, lake, executor='serial', batch_size=64, fail_after=None, fault_
             if p.is_file():
                 with p.open('rb') as f:os.fsync(f.fileno())
         destination.parent.mkdir(exist_ok=True)
+        verify_snapshot(stage)  # Validate before making the snapshot visible.
         os.rename(stage,destination)
         # A crash after rename can leave an unregistered directory; rerun verifies and registers it.
         with closing(connect(lake)) as con, con:
