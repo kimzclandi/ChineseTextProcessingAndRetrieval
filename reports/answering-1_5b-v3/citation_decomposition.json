@@ -1,0 +1,14 @@
+{
+  "1": {
+    "answered": 13,
+    "verbatim_quote_verified": 13,
+    "reference_answer_span_supported": 4,
+    "note": "verbatim substring validity does not prove relevance/entailment; reference-span support allows longer correct-source quotes, unlike exact answer match"
+  },
+  "3": {
+    "answered": 8,
+    "verbatim_quote_verified": 8,
+    "reference_answer_span_supported": 4,
+    "note": "verbatim substring validity does not prove relevance/entailment; reference-span support allows longer correct-source quotes, unlike exact answer match"
+  }
+}

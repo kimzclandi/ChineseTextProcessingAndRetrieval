@@ -1,0 +1,705 @@
+{
+  "version": "span-qa-v1",
+  "split": "holdout",
+  "queries": [
+    {
+      "answers": [
+        {
+          "start": 70,
+          "text": "东突厥汗国和西突厥汗国"
+        }
+      ],
+      "doc_id": "9431600662464e358cc0223ec4b4936bf758b8946636fd3b7b439d993ed5743d",
+      "family_id": "1e03a98356ad142a3cd07693ff868c07fdfa572b84aa3fed09bba5f2be9b820c",
+      "id": "TRAIN_1618_QUERY_0",
+      "question": "突厥汗国分裂成哪两个国家？",
+      "source_id": "cmrc-train:1096:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 230,
+          "text": "伊戈尔·斯维亚托斯拉维奇"
+        }
+      ],
+      "doc_id": "52a8a4c9af86c9cc8eb6110374650acb6a47c1102e575b63fe5a6eb0df224e1c",
+      "family_id": "bbc46afecf35f262fd2e8e6938fd6411ad807a9cc91b0a1526135d9754529a3a",
+      "id": "TRAIN_297_QUERY_4",
+      "question": "史诗《伊戈尔远征记》的主人公是谁？",
+      "source_id": "cmrc-train:194:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 277,
+          "text": "4至6月"
+        }
+      ],
+      "doc_id": "c721650a045f1449e2bce45988dbd842bc47ecf6da9fa5019f332583d5dd937f",
+      "family_id": "0bad3aca6c9483922917fe22ad58ffe5555c28d8d854f9c917803fd855f91799",
+      "id": "TRAIN_3503_QUERY_2",
+      "question": "蓝点马鲛产卵期在什么时候？",
+      "source_id": "cmrc-train:2142:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 380,
+          "text": "主要原因是受到猫及大家鼠的掠食，并受到栖息地破坏的影响。"
+        }
+      ],
+      "doc_id": "6ab757e7bb74e4b197e699f22bea63b614b0b3f4e5b3b38cf15537d0d4610fa4",
+      "family_id": "cd7eeff4e50aaaa45d2ccd4b55fa8cad14b98a4e38f1a6c3be4a2e933e101be0",
+      "id": "TRAIN_2071_QUERY_4",
+      "question": "为什么到了1880年代，新西兰鸫鹟的数量大幅下降？",
+      "source_id": "cmrc-train:1333:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 161,
+          "text": "义大利,法国,西班牙的美食。"
+        }
+      ],
+      "doc_id": "670faf22ffba820c67ded57fb9a2fa2074c77484067a15b4f891644418267dd6",
+      "family_id": "2e651d3be0e7d7ed281847df74c06487f9be7f8ce843b16a5e60eee4f87868fb",
+      "id": "TRAIN_2252_QUERY_3",
+      "question": "18岁时他开始从事厨艺事业，在欧洲体验生活时开始学习哪个国家的食品？",
+      "source_id": "cmrc-train:1509:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 39,
+          "text": "张华标"
+        }
+      ],
+      "doc_id": "ac44c3c934de5e0cbb1532e5e6781775cccbd3265cd54ab42ca5159ee78d0b1e",
+      "family_id": "7606aebcefdfd6370eabb7be494c36d3c290e621a381dbafc6bdeaf45983e15b",
+      "id": "TRAIN_2679_QUERY_1",
+      "question": "《人在边缘》的监制是谁？",
+      "source_id": "cmrc-train:1908:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 91,
+          "text": "开市竞价交易时段是指每个交易日开市前半小时的称呼，该时段可分成四部份"
+        }
+      ],
+      "doc_id": "18910eba258fd869e9e91fb5f59464d000d95368349ddd1c55985381fac5182b",
+      "family_id": "d74b336e0e12fbf69674b4033dd4621ae8d864b72258882edca1d1d51f4e522c",
+      "id": "TRAIN_1667_QUERY_1",
+      "question": "什么是开市竞价交易时段？",
+      "source_id": "cmrc-train:1135:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 87,
+          "text": "小循环"
+        }
+      ],
+      "doc_id": "09352da4ff7c372d7923f73e5590211fd5d32e458a158dc7dcf6b7443173a430",
+      "family_id": "aeac5bd9bf928d254094bee46d4eb33445ec00e20c7546ceb590d4d44cc01f66",
+      "id": "TRAIN_688_QUERY_1",
+      "question": "相对于体循环的另一种血液循环又叫什么？",
+      "source_id": "cmrc-train:328:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 71,
+          "text": "比利时漫画家埃尔热"
+        }
+      ],
+      "doc_id": "ba7f6b3021008512b7f3ca85bc243a62b5f731a18626625b98901b87d4f8578a",
+      "family_id": "131725463da9c382978e7578e656f3c6283e93c89881f5910f18ab96e5fec77b",
+      "id": "TRAIN_1175_QUERY_0",
+      "question": "《太阳的囚徒》的作者是谁？",
+      "source_id": "cmrc-train:816:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 47,
+          "text": "552 x 627 英尺 ，是捷克最大的中世纪广场之一。"
+        }
+      ],
+      "doc_id": "421c9e690f935c7250565b829b00a971f422d67c4389c626ee9a62d9f70d2821",
+      "family_id": "fc67eace7dbd4e23dd4361d76164d34651b1024c06b1a6580499d2712415b3b9",
+      "id": "TRAIN_2077_QUERY_1",
+      "question": "共和国广场的规模有多大？",
+      "source_id": "cmrc-train:1338:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 31,
+          "text": "苏黎世大教堂, 苏黎世圣母大教堂和Predigerkirche"
+        }
+      ],
+      "doc_id": "d775b437cebdb3bf1a38b2fde8f72c105d3450d29ba1fc3de9ca1582b79bc9d8",
+      "family_id": "1c925302bdd25532bdc19e16a03bf9695283e4525a9541d36d1a8990cb89bed0",
+      "id": "TRAIN_2162_QUERY_0",
+      "question": "瑞士苏黎世老城的4座主要教堂除了苏黎世圣彼得教堂，另外三座是哪三座？",
+      "source_id": "cmrc-train:1420:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 58,
+          "text": "单行本20卷"
+        }
+      ],
+      "doc_id": "7772f60e2d478ef66f9be31209d9a5237f30faecb06515860aa9754ee6af6d00",
+      "family_id": "994fb83396eed0825ca3c6b337f3d8d5ad469666c7a83b0ea696d57a5d2852dc",
+      "id": "TRAIN_2617_QUERY_2",
+      "question": "《小咩的管家》单行本有多少卷？",
+      "source_id": "cmrc-train:1861:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 40,
+          "text": "9世纪"
+        }
+      ],
+      "doc_id": "b4ad2fbd5c8e931f7028e1d8f9985308574e348f3debeb7437e94a08cbe16749",
+      "family_id": "218ed5ff232c8033c9017c82d7f2e33ac6420b926508cd36e74bc43772d954fe",
+      "id": "TRAIN_3762_QUERY_0",
+      "question": "印度-阿拉伯数字系统起源于几世纪？",
+      "source_id": "cmrc-train:2350:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 156,
+          "text": "水平型微指令又分为三种:一种是全水平型(不译法)微指令，第二种是字段译码法水平型微指令，第三种是直接和译码相混合的水平型微指令"
+        }
+      ],
+      "doc_id": "12d614c86528ecb05e5fc359da7de1669b6f3caa6ed66234778c986e03d9108e",
+      "family_id": "c6bb5a8f3963e477249ab48964478efe3a4b735f0fd213e543f5d70a943c90c3",
+      "id": "TRAIN_287_QUERY_3",
+      "question": "水平型微指令可以分成哪几种？",
+      "source_id": "cmrc-train:323:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 51,
+          "text": "邦板牙省克拉克自由港区的克拉克国际机场"
+        }
+      ],
+      "doc_id": "e808a721a18b7c1f955229c0abffb7b32516b68efe633ebc1ab786c30ac24b12",
+      "family_id": "3fd97518c2f3fdd5e208426481a0cd72496a6002f24c410c47afcffce20d87a7",
+      "id": "TRAIN_2099_QUERY_1",
+      "question": "天文航空的基地在哪里？",
+      "source_id": "cmrc-train:1358:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 12,
+          "text": "是日本朝日电视台于2009年1月16日开播"
+        }
+      ],
+      "doc_id": "805a770277f4666569f40b77b1d83fad4a73cb1fcc304100fb4a139a4e6cc5bc",
+      "family_id": "ae94073b18f54b4bf6a812bfabc09b930cc332e138e6910ed59f06553df36743",
+      "id": "TRAIN_174_QUERY_0",
+      "question": "《音乐孩子王》是何时开播的？",
+      "source_id": "cmrc-train:205:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 53,
+          "text": "全球各大洋的温暖海域"
+        }
+      ],
+      "doc_id": "39b3ea2bf364a18f1acca7f79d63072ea35c7252a1e103319a72c0443856436c",
+      "family_id": "22e0b62f5899096acd126c4f50ae870be141a88ab814b7058ae99ab200b9c568",
+      "id": "TRAIN_3507_QUERY_1",
+      "question": "鲣分布在哪里？",
+      "source_id": "cmrc-train:2146:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 46,
+          "text": "14支"
+        }
+      ],
+      "doc_id": "97a302207e8f7b8f8b5d750469ac080e9015a1983ed07f8566253933dbf24c46",
+      "family_id": "356955983d6e78241367d1ec8df1c30e58358d09958bc91bbe18e7bdfb1b7d05",
+      "id": "TRAIN_1579_QUERY_1",
+      "question": "本届联赛扩军至多少支球队？",
+      "source_id": "cmrc-train:1060:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 91,
+          "text": "车票与通用储值票一样有效期为6个月"
+        }
+      ],
+      "doc_id": "b7d29021388c00b176d07a7c57cff46dd16f54968560d475be3e3a8ac647b047",
+      "family_id": "0ca31e00faa75712040012d997908890603afe9ab09303dcfe127aeabce5e91a",
+      "id": "TRAIN_347_QUERY_4",
+      "question": "车票的有效期是多久？",
+      "source_id": "cmrc-train:563:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 112,
+          "text": "收集海平面的实时数据"
+        }
+      ],
+      "doc_id": "203a56a8222914e84be04e31a53ffad82c0286af6624d545f363da292335d29e",
+      "family_id": "30413d1af264f6346197b5bd99a272ddb227aac3b295cc48d45ecb70019b3d47",
+      "id": "TRAIN_2047_QUERY_1",
+      "question": "自2004年印度洋地震后，该计划的目的已经改变成什么",
+      "source_id": "cmrc-train:1309:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 25,
+          "text": "崇祯十六年（1643年）"
+        }
+      ],
+      "doc_id": "7c5011fc3875f54edad868363ccf36ae8adb96f461c7f242b1aba6986c40003b",
+      "family_id": "9a86c8ed87e9d76a4474b0b26faf427348680032e0ef9eb16297a4e8dd7d78c4",
+      "id": "TRAIN_3672_QUERY_1",
+      "question": "朱慈炯在哪一年被封为定王？",
+      "source_id": "cmrc-train:2276:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 80,
+          "text": "《大唐西京千福寺多宝塔感应碑》"
+        }
+      ],
+      "doc_id": "a3bcee7c9c11d754d501feeef101ba6acfd9faa225000cb43f2b805df6440e5a",
+      "family_id": "b763149fe08991e88f598e0f394ac8ff4ef551719df3963dc429884cc0a3f6e8",
+      "id": "TRAIN_3719_QUERY_2",
+      "question": "《多宝塔碑》全称是什么？",
+      "source_id": "cmrc-train:2320:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 30,
+          "text": "2008年3月30日开始，至2008年11月9日结束"
+        }
+      ],
+      "doc_id": "adb55188b852c451d45fca0bea9960be3dd672138aac55b22018d448fcecd3bc",
+      "family_id": "286b22cac3e675a6fb128a1ce51ff9e83a73ac81f3b54644ed5028a8160d46f1",
+      "id": "TRAIN_792_QUERY_0",
+      "question": "2008年瑞典足球超级联赛起讫于什么时候？",
+      "source_id": "cmrc-train:111:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 192,
+          "text": "玩家需要在随着音乐节奏沿轨道下落的音符记号与判定线重合时按下相应的按键或转动转盘以完成音乐的演奏，根据玩家按键或打碟的时机正确与否会产生JUST GREAT、GREAT、GOOD、BAD、POOR的判定，由此获得不同的分数。"
+        }
+      ],
+      "doc_id": "f26f03259149da1e6096a67a15d50a60d5524d4cf5e8db187790e8c07d6947d0",
+      "family_id": "3b055a997a9f37ab2c5d176843ca1d98c09ad04a0de6533ffc16f4c08f5ffc97",
+      "id": "TRAIN_802_QUERY_2",
+      "question": "玩家怎样得到分数？",
+      "source_id": "cmrc-train:429:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 438,
+          "text": "研究第一张邻近的红矮星显微镜AU和明亮的北落师门光学影像岩屑盘"
+        }
+      ],
+      "doc_id": "143b56ca10eba8d113ea275861f823239eac01678574c9f5ced11bb6bdbca20b",
+      "family_id": "7c97299c035e542c96a9aa54004abc94281fb2e8fc288f47bfe933ae65ff953f",
+      "id": "TRAIN_2203_QUERY_3",
+      "question": "卡拉斯是研究什么的首席执行官？",
+      "source_id": "cmrc-train:1460:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 284,
+          "text": "管理者是国际能源委员会（International Energy Agency）"
+        }
+      ],
+      "doc_id": "8d03676514ccbd2714d096c7faed5f7abfb8e62123c3ffaac3fda47cbce21c13",
+      "family_id": "abb1b6dd3f656e622ee9a2e8bf5419b6611ee172b48c4a43d584f4e82bb8e6d8",
+      "id": "TRAIN_339_QUERY_4",
+      "question": "IFMIF的管理者是谁？",
+      "source_id": "cmrc-train:348:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 5,
+          "text": "是一种新兴的花式撞球运动项目，其基本玩法与9号球类似，但多了一颗10号子球，而且击球前必须先指定球、指定袋，所以困难度提高很多，颇具发展潜力。"
+        }
+      ],
+      "doc_id": "00449223a47af2b123e857a39abd479133d9380603ab1c094ea17bea8b0190d5",
+      "family_id": "dc2d59e1cacaf1f95fc99180e108d4a2ea35ebeb8312b2e605ddd338da474fbb",
+      "id": "TRAIN_2428_QUERY_0",
+      "question": "10号球是什么？",
+      "source_id": "cmrc-train:1683:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 565,
+          "text": "八年时间"
+        }
+      ],
+      "doc_id": "673565e00be2fd9590bb51ad66dcf0140021b98ef666c560f7653c9edb943ba3",
+      "family_id": "1100381a34632662dff23bd5a5adfb0d3499d686a61d95153474ad495b317064",
+      "id": "TRAIN_3775_QUERY_4",
+      "question": "黄西田在台湾花了多长时间才把债务还清？",
+      "source_id": "cmrc-train:2362:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 15,
+          "text": "唐代许嵩"
+        }
+      ],
+      "doc_id": "46a1d3600adbec7863361e94699cc59900e33d4077cad9fd1f05d885d86ea909",
+      "family_id": "2c6f346f3923d94fd0cf80f2f88259360b3739b9d2be6bdd557039ce5e84a72f",
+      "id": "TRAIN_2356_QUERY_1",
+      "question": "这本书是由谁编撰？",
+      "source_id": "cmrc-train:1613:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 158,
+          "text": "永定元年（557年）陈霸先代梁称帝，章夫人被立为皇后。"
+        }
+      ],
+      "doc_id": "da90d5e5bbdfb4a2db22b9426c7405fefb098f2bdaa6b3a5183133303ea650ef",
+      "family_id": "a1330ff10d58d1d1c2da481b3e0561401b64d4df05f0ae62ed260e7aee6152c6",
+      "id": "TRAIN_436_QUERY_1",
+      "question": "章要儿什么时候被封为皇后的？",
+      "source_id": "cmrc-train:78:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 6,
+          "text": "是一家反病毒引擎和解决方案厂商，提供检测PC恶意代码和移动恶意代码的顶级反病毒引擎和下一代反病毒服务。"
+        }
+      ],
+      "doc_id": "d8e0584c748e3829d68ede735cf3e2b0763dded9cfbac68a681f9316348957f9",
+      "family_id": "e0160a233a2b3ae8360c3d97d3d54c1462307a4407c2949e188468aee39ee527",
+      "id": "TRAIN_2141_QUERY_0",
+      "question": "安天实验室的定位是什么？",
+      "source_id": "cmrc-train:1400:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 45,
+          "text": "朗达玛"
+        }
+      ],
+      "doc_id": "d4427eb13a7f968efff7d5e58c46da167fbda341a6780fd9ee8ed47074f7064d",
+      "family_id": "edd7bcd1f46ad1c69343d5ca271b9eecca1c3e6edcdaeb343f237431c38fc00a",
+      "id": "TRAIN_2726_QUERY_0",
+      "question": "安达·云丹的父亲是谁？",
+      "source_id": "cmrc-train:1953:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 261,
+          "text": "《申报》老板史量才"
+        }
+      ],
+      "doc_id": "95be24b877e1919c606fa65553e2a2b3f4e2740a490b6e72c521d1554304cc43",
+      "family_id": "87e78c530fa11d1905c4893d0b9b9498cbf37a567dc9928a144ec36082debf7c",
+      "id": "TRAIN_3038_QUERY_1",
+      "question": "第一个拥有「亨马车」的华人是谁？",
+      "source_id": "cmrc-train:2035:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 23,
+          "text": "曾任库务司（1995-1997）、库务局局长（1997-1998）、资讯科技及广播局首任局长（1998-2000），后转任香港交易所行政总裁"
+        }
+      ],
+      "doc_id": "cb45f6373761abdf1aac8efe5cc7a1a4263515e8dda0346e9a1e00833d175463",
+      "family_id": "c66cc832a0b37c79faff7d86f281ae45dcc64b77cd726845ca72d61f273756f9",
+      "id": "TRAIN_1504_QUERY_0",
+      "question": "邝其志曾任什么职位？",
+      "source_id": "cmrc-train:992:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 30,
+          "text": "于1989年开始清拆，改建为海滨公园及休憩场地"
+        }
+      ],
+      "doc_id": "04294c3b57bbed6aa6915d65f2955882b34520c4fab41aaf2e4a7c056ef2ad93",
+      "family_id": "c3925e460404612af110b1c35ea24201c03ce179647231938d6683b793313d09",
+      "id": "TRAIN_108_QUERY_1",
+      "question": "盐寮下村是什么时候被清拆、改建的？",
+      "source_id": "cmrc-train:410:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 133,
+          "text": "风速仪、风向标、温度计、湿度计（获得相对湿度）、晴雨表和雨量计"
+        }
+      ],
+      "doc_id": "e5649fd87fcbf85fee77e4107c5e1b69448b197c15e5dfb5cae7e5caa6799d3a",
+      "family_id": "22d0d2c894f609ca90a9e03d61c618fbb0e34f49fd9910b0afa4ffe711ed44ed",
+      "id": "TRAIN_2037_QUERY_2",
+      "question": "个人气象站的典型仪器有哪些？",
+      "source_id": "cmrc-train:1299:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 358,
+          "text": "阿兹特克人因此认为要借由活人献祭，以确保太阳会继续运行"
+        }
+      ],
+      "doc_id": "2e87c3d60b0187d2102924b11b1830b187e23e09b0fb6e297808c1de613ee4df",
+      "family_id": "ee1547876e753920522d258fff19a6250e9e9d2fc22fb19fa7179842695e3378",
+      "id": "TRAIN_59_QUERY_3",
+      "question": "阿兹特克人决定进行活人献祭的原因是什么？",
+      "source_id": "cmrc-train:336:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 69,
+          "text": "政治、经济、文化、交通的中心"
+        }
+      ],
+      "doc_id": "7bf4e860f2a6e28a89b2d70c6b4f34ca8877e82465e8354b8351b9af2330d620",
+      "family_id": "d323c92a299edf474f2dd7970625e3b51a6a330ce91986519f6456a318a7c249",
+      "id": "TRAIN_1322_QUERY_3",
+      "question": "紫城镇是全县的什么中心？",
+      "source_id": "cmrc-train:962:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 468,
+          "text": "常在草丛内的根部、水生植物内成串缠绕。"
+        }
+      ],
+      "doc_id": "3d33d0e547cddf0b8d782d6a4f6e5869f1bfcb6b3e24b6c3bf7f08c28d5d3846",
+      "family_id": "0a4f07d237d9d462b11a1fff338e667aa1e915c404269f31e246b41d5f6d881e",
+      "id": "TRAIN_2055_QUERY_4",
+      "question": "棕树蛙卵常常以什么样子的形式存在？",
+      "source_id": "cmrc-train:1317:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 276,
+          "text": "利用数值方法来求得基态"
+        }
+      ],
+      "doc_id": "f89c14084155113cd59772e266c64c28e93772cf82508b863b9a85cbbaaaf03b",
+      "family_id": "9e57033bbc8e44b0f0e7916714735cee9432840dedceeab7dff2f9be0a0a3074",
+      "id": "TRAIN_2308_QUERY_1",
+      "question": "量子系统的基态一般是采用什么方式计算出来的？",
+      "source_id": "cmrc-train:1565:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 143,
+          "text": "他先后于1993年以诺贝尔和平奖获得者身份和于1996年以南非总统身份两次登台讲演。"
+        }
+      ],
+      "doc_id": "4bef657ec4e8ca0e4dba7f4e647cf6fbc63e3a8739440997480d19458702ad69",
+      "family_id": "f9ca65b0d52a870a947db69b4deb2f083722e51c0773bf4b6f9621b7ef3d4aee",
+      "id": "TRAIN_1122_QUERY_2",
+      "question": "曼德拉两次登上讲台分别是以什么身份？",
+      "source_id": "cmrc-train:766:0",
+      "split": "holdout",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 68,
+          "text": "电影《单亲插班生》"
+        }
+      ],
+      "doc_id": "48021baaa5eff197bc8804f6bbaf58bf91751dcbd15b4546a7fa7d35f7393dfe",
+      "family_id": "4c3f426db473486d13818c462a6c61f5ccf6668d7bfaac705fbdb9f7e33b5a31",
+      "id": "TRAIN_1287_QUERY_1",
+      "question": "尼古拉斯·卡拉多克·霍尔特的成名作是什么？",
+      "source_id": "cmrc-train:927:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 27,
+          "text": "2008年8月16日开始，2009年5月24日结束"
+        }
+      ],
+      "doc_id": "4fc0bbe296bc03110890b8857203289a6a6b06e96c8258197e8b049d19146aa4",
+      "family_id": "1c43eb6b33968ac2a0b7d42ec83b4efafc7d770a7ca0a0cbe9803e60785f82b7",
+      "id": "TRAIN_572_QUERY_0",
+      "question": "2008年至2009年英格兰超级联赛起讫于何时？",
+      "source_id": "cmrc-train:308:0",
+      "split": "holdout",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 92,
+          "text": "110,550平方公里"
+        }
+      ],
+      "doc_id": "42560b9bed336daf557c761a9adfb640fb67fd3e67e8616d329b899f8297d89e",
+      "family_id": "8b93b4c370a2dc0e21e21b67f979b3176b38347d14f46e54736444769a8118b6",
+      "id": "TRAIN_1682_QUERY_3",
+      "question": "保加利亚国土面积有多少？",
+      "source_id": "cmrc-train:1147:0",
+      "split": "holdout",
+      "answerable": true
+    }
+  ],
+  "corpus_sha256": "030aa6230b2af1959267f73c4f6379ec33d64ca47423d02b1e049d8e58bf7332",
+  "withheld_document_ids": [
+    "12d614c86528ecb05e5fc359da7de1669b6f3caa6ed66234778c986e03d9108e",
+    "3d33d0e547cddf0b8d782d6a4f6e5869f1bfcb6b3e24b6c3bf7f08c28d5d3846",
+    "46a1d3600adbec7863361e94699cc59900e33d4077cad9fd1f05d885d86ea909",
+    "48021baaa5eff197bc8804f6bbaf58bf91751dcbd15b4546a7fa7d35f7393dfe",
+    "4fc0bbe296bc03110890b8857203289a6a6b06e96c8258197e8b049d19146aa4",
+    "52a8a4c9af86c9cc8eb6110374650acb6a47c1102e575b63fe5a6eb0df224e1c",
+    "7bf4e860f2a6e28a89b2d70c6b4f34ca8877e82465e8354b8351b9af2330d620",
+    "8d03676514ccbd2714d096c7faed5f7abfb8e62123c3ffaac3fda47cbce21c13",
+    "a3bcee7c9c11d754d501feeef101ba6acfd9faa225000cb43f2b805df6440e5a",
+    "d775b437cebdb3bf1a38b2fde8f72c105d3450d29ba1fc3de9ca1582b79bc9d8",
+    "e808a721a18b7c1f955229c0abffb7b32516b68efe633ebc1ab786c30ac24b12",
+    "f89c14084155113cd59772e266c64c28e93772cf82508b863b9a85cbbaaaf03b"
+  ],
+  "source_documents_sha256": "bac8b8121d6db4cc3d2dca028f188708ff6f8b1e6525893ef356cd8c7f4dea7d",
+  "arms": [
+    "json",
+    "span",
+    "verified_span"
+  ],
+  "k": 3,
+  "size": 160,
+  "stride": 80,
+  "extract_prompt": "完成阅读理解，从参考材料中提取问题的答案。答案使用材料原文，尽量简短。有答案时必须回答；确实没有答案时回答 NO_ANSWER。只写答案，不写解释。\n示例一\n材料：青松站于1998年开放。\n问题：青松站何时开放？\n答案：1998年\n示例二\n材料：紫桥位于海州市。\n问题：紫桥位于哪里？\n答案：海州市\n示例三\n材料：紫桥位于海州市。\n问题：紫桥有多长？\n答案：NO_ANSWER\n",
+  "verify_prompt": "判断引文是否直接回答问题。仅有相同主题或词语不算支持。答案必须回答问题所问的具体属性，不能依赖外部知识。支持只输出 YES；不支持、信息不完整或不能确定只输出 NO。\n",
+  "snapshot_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "generation": {
+    "max_new_tokens_per_call": 80,
+    "do_sample": false,
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4
+  },
+  "hypothesis": "Deterministic citation binding reduces format loss; a separate relevance decision reduces source-withheld false answers.",
+  "success": "Holdout span arm improves answerable exact matches by >=3/32 over JSON and does not increase false answers on 12 withheld-source probes; verifier must improve negative errors without losing positive EM.",
+  "failure": "Any unmet condition retained; no holdout-driven prompt revision or reroll.",
+  "scope": "QA-generation-disjoint from prior 24 questions, one question per family; historical retrieval holdout has been evaluated before. Negative labels mean withholding the sole exact-reference source, not universal world-knowledge absence.",
+  "frozen_utc": "2026-09-21T14:21:32Z"
+}

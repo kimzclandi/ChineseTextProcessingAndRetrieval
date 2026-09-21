@@ -1,0 +1,408 @@
+{
+  "version": "rag-closed-loop-v1",
+  "dataset_sha256": "bac8b8121d6db4cc3d2dca028f188708ff6f8b1e6525893ef356cd8c7f4dea7d",
+  "queries": [
+    {
+      "answers": [
+        {
+          "start": 193,
+          "text": "分赛区的赛会制比赛形式"
+        }
+      ],
+      "doc_id": "71c588f7c2a40beade18d56df9185e404c8e13f73d62a331311d5eabe07f3cbb",
+      "family_id": "5156194a695930268c49c8c480c27a1a35f8c9c238c4eb003b77fd32913c008d",
+      "id": "TRAIN_2261_QUERY_4",
+      "question": "2005年，换成什么赛制？",
+      "source_id": "cmrc-train:1518:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 28,
+          "text": "“龙冈市立第一国民学校”"
+        }
+      ],
+      "doc_id": "8d4f6b47a2716a03a731d85e3889f92e7e88d26cc24dd34fdbbfa466a0934ddf",
+      "family_id": "d9052611f9c4dedbd8719501cf6b682701678514dca58a6488936afe012659a9",
+      "id": "TRAIN_2637_QUERY_0",
+      "question": "龙冈小学原来叫什么名字？",
+      "source_id": "cmrc-train:1876:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 687,
+          "text": "可使牠们有更大的进食范围，或者是在求偶时具有视觉辨认的功能"
+        }
+      ],
+      "doc_id": "b6d73c8b80259eb16bac316991305dab76740ad53a71e4a7d528af7f5d734ec1",
+      "family_id": "1f8e6f696e3254f9693db80965932606db5b445e06e6159130dff16ba390ad63",
+      "id": "TRAIN_1586_QUERY_3",
+      "question": "马特乌斯等科学家推论，米拉加亚龙的长颈部有什么用？",
+      "source_id": "cmrc-train:1066:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 3,
+          "text": "（化学式：CrCl）"
+        }
+      ],
+      "doc_id": "d3a5f47eefde19f4e1a35bead79944b05cb7ba5a26558fcfcc5f586dbbdca012",
+      "family_id": "f7fb292745b7c1a871f665db1c322dcd62234252f3a5e38f3b928e9279ce0c84",
+      "id": "TRAIN_2600_QUERY_0",
+      "question": "氯化铬的化学式是什么？",
+      "source_id": "cmrc-train:1847:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 34,
+          "text": "1890年"
+        }
+      ],
+      "doc_id": "2703637100d0b746f38742e7e610808f6f54bdbf2d702251ab8a39e47969360f",
+      "family_id": "5edc71e7ae0dcd5d2f62c1c911adb9ea4c5b3ae800424f60e4c55fa5368440a4",
+      "id": "TRAIN_1605_QUERY_1",
+      "question": "西澳州政府体制成立于哪年？",
+      "source_id": "cmrc-train:1084:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 107,
+          "text": "参考前朝文献制订典章及制度。"
+        }
+      ],
+      "doc_id": "b629ebed331c15306b4f970f898955ed6ac1785ca497acef851c164f7bd87a0e",
+      "family_id": "5e9daa991aefc3fc1becfc48d9e9ae91f01d64e897760f63b9cfde035bc3f8e2",
+      "id": "TRAIN_2357_QUERY_1",
+      "question": "萧何担任相国时，有什么作为？",
+      "source_id": "cmrc-train:1614:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 34,
+          "text": "由欧洲足联颁发的一个足球奖项，是通过网上问卷调查评选出来的。"
+        }
+      ],
+      "doc_id": "199aa6bb20de10b5fd84a9b286021827d60a9f7f3e83dbe220d65af8f07eedc3",
+      "family_id": "d520ea0cbd589ae480c83d383870870ca5e17185c22add2c79d524e566e5cdd2",
+      "id": "TRAIN_2189_QUERY_0",
+      "question": "欧洲足协年度最佳阵容具体指什么？",
+      "source_id": "cmrc-train:1446:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 227,
+          "text": "必须自行以其他电视剧覆盖中视无线台播映此三部电视剧时的节目讯号"
+        }
+      ],
+      "doc_id": "3712940ad3d07c0298031733f8b62dd0fb03bd892f7613c849247a3b517b12ad",
+      "family_id": "93deabd81cf4515937bb75fc4447f66669ca6aa31a12b25930394ef6c79e6fe9",
+      "id": "TRAIN_2402_QUERY_3",
+      "question": "持有《-{伊甸园之东}-》、《流星花园》、《我的亿万面包》等三部电视剧台湾版权的八大电视透过中视要求中华电信MOD频道商做出什么调整？",
+      "source_id": "cmrc-train:1658:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 23,
+          "text": "熊谷奈苗"
+        }
+      ],
+      "doc_id": "1cb1c97f88fcdc9abc2927631a5a2ca28e03237545c1913e0811dcf3834e74d8",
+      "family_id": "26b3bdbd983b430cf617ff7cb6e286e603cc4cecbade166417a83d98b18d0edb",
+      "id": "TRAIN_3046_QUERY_1",
+      "question": "恩田陆的本名是什么？",
+      "source_id": "cmrc-train:2043:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 564,
+          "text": "一致反对欧盟要求成员国按比例分配接收难民的计划。"
+        }
+      ],
+      "doc_id": "1ab5a4f79425af8493b17f0d9981fa2540e9e62a05476a6084ceadb6b9406858",
+      "family_id": "d43c35e0b95a8893755cede8f44602ceb74a1741a90d7c9d1bdb2290cb224938",
+      "id": "TRAIN_2200_QUERY_3",
+      "question": "维谢格拉德集团在欧洲移民危机上持有什么观点？",
+      "source_id": "cmrc-train:1457:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 122,
+          "text": "JR东日本所属的月台区是位于车站二楼"
+        }
+      ],
+      "doc_id": "e47f82aae0c2c1afd0e2afc6037909684b04c70f13602aa2aefebd0c039edc5f",
+      "family_id": "b2245ef1fb468e4b545e85be238d1424b8c3258fe9fb4c7ae6f2cb0d47bfe13c",
+      "id": "TRAIN_325_QUERY_1",
+      "question": "JR东日本所属的月台区在哪里？",
+      "source_id": "cmrc-train:138:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 96,
+          "text": "曾参加过多届世界乒乓球锦标赛，先后获得过男团、男双和混合双打冠军，并获得过男子单打第三名。"
+        }
+      ],
+      "doc_id": "9c4d7d743958b21973cc831de71425aeaf606999b16fa963b5d99f6b085f86cc",
+      "family_id": "77a98026b13865cbe11dd93caff0d70340e1b5bc77f58751fdf07afac4e24591",
+      "id": "TRAIN_597_QUERY_2",
+      "question": "张燮林获得过哪些卓越的功绩？",
+      "source_id": "cmrc-train:374:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 169,
+          "text": "大家被期待的标准大多相同"
+        }
+      ],
+      "doc_id": "f75c8be09a99420985d7899ff4153aa57211814fb2147e9bebdafd005af31e3d",
+      "family_id": "f07a24b25b6472a05c3f6bb5fe29755a786a7a83817e8a0181de3d72081dd9e0",
+      "id": "TRAIN_3681_QUERY_3",
+      "question": "为什么在天神学校中，4班是十分有趣的班级？",
+      "source_id": "cmrc-train:2283:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 86,
+          "text": "年供水量为五千二百万公吨。"
+        }
+      ],
+      "doc_id": "6b97b4e505d5229348a31f3971768af4358dd5f1eccc1d79b60056f10eeb4aa0",
+      "family_id": "01cf1569046fc4718eb270ffd80399475022cb887cb51d508f776afbaa01b0a9",
+      "id": "TRAIN_328_QUERY_2",
+      "question": "仁义潭水库的年供水量约是多少吨？",
+      "source_id": "cmrc-train:79:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 589,
+          "text": "支持上杉景胜一方，表现十分活跃。"
+        }
+      ],
+      "doc_id": "be6ed2afe6e1f7f94d07982b5328390048f160770f1b6df4fc2347551040239a",
+      "family_id": "775dfca7c1a7bee61f65c3f478ec0db77b2eadb4ba8f5ebde1d2371275787162",
+      "id": "TRAIN_2317_QUERY_3",
+      "question": "新发田长敦在御馆之乱中怎么表现的？",
+      "source_id": "cmrc-train:1574:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 23,
+          "text": "唐玄宗时期"
+        }
+      ],
+      "doc_id": "d4c84999a5bd05322316120c8f226dddb4da2e4ebd8e9e77b1b58e8bc43ad2f3",
+      "family_id": "a2dbc8e0dbdcb26e83c897152bec98e28d07b37c74e51a9099ade83ca1be6b75",
+      "id": "TRAIN_357_QUERY_0",
+      "question": "曹霸是哪个时期的画家？",
+      "source_id": "cmrc-train:382:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 156,
+          "text": "东山线的列车不再停下此站"
+        }
+      ],
+      "doc_id": "5f134ea7523ec14618493445fce762eb53b1f2b56a41aba2ba4133af319b29f4",
+      "family_id": "e0e108b1c77ec962f9bfc2792e0bc5536de4d50c3acb8a950764b7606cef2195",
+      "id": "TRAIN_3560_QUERY_1",
+      "question": "丁比站为什么不再使用1和2号月台？",
+      "source_id": "cmrc-train:2191:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 187,
+          "text": "Windows XP SP2和Windows Vista"
+        }
+      ],
+      "doc_id": "26d5053640d2d1d76e8dfa7677a00535dcac6c6db71f073ea0ec21ef1c0df815",
+      "family_id": "beb50eed308efe75fed8c269a409f36bb4cd4dd10fea8bb1bcba93f2dfcc243f",
+      "id": "TRAIN_1242_QUERY_2",
+      "question": "作为预设的网页浏览器，微软还发行了哪两款适应Windows XP的浏览器？",
+      "source_id": "cmrc-train:882:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 515,
+          "text": "演员刘永"
+        }
+      ],
+      "doc_id": "1f75cf76cc5b27f5ff3d02b198c8e4ce15ada99aafeb8c85eac4e0a1bea7b205",
+      "family_id": "bc1edfac01c733dfcd4c2dab097de31584bb822bd13cd1612b658edd6034b8e9",
+      "id": "TRAIN_1525_QUERY_3",
+      "question": "1992年，黎燕珊与谁结婚？",
+      "source_id": "cmrc-train:1011:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 237,
+          "text": "科普当时被要求签下言论禁止令"
+        }
+      ],
+      "doc_id": "867bfd3fdf7cb9071a45b8ddd3ea986578055c62fff68f8908842b697544a1f3",
+      "family_id": "02cc723a1446328762e81fd49b242701171a92f5516b7acf95e72118142b7452",
+      "id": "TRAIN_1203_QUERY_3",
+      "question": "杰森·科普为什么一直没有透露离开乐团的原因？",
+      "source_id": "cmrc-train:844:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 263,
+          "text": "赫拉古庙（The Heraion）"
+        }
+      ],
+      "doc_id": "1103f61057adc418a8b27e2c6af27a7fe318ed3ef454fd8ab1c1f96b0b77961a",
+      "family_id": "f21bb825c37d87acffb42ae1bc01982617a685157e5a7f3883512fb794e7f164",
+      "id": "TRAIN_1800_QUERY_2",
+      "question": "萨摩斯岛最著名的建筑是什么？",
+      "source_id": "cmrc-train:1239:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 3,
+          "text": "西周早期的一件青铜酒器，为贵族“何”作于周成王五年（前11世纪），是西周最早的有明确纪年的青铜器。"
+        }
+      ],
+      "doc_id": "c4d3029ec4fa5ac63a1a16795a76dded1f95d22a1dbc7171664d82aa95a820a8",
+      "family_id": "431eca6950e86eaf51db0029ee652d1dac182db1ee63f4f2bf7eb2d20e5d8e8d",
+      "id": "TRAIN_2185_QUERY_0",
+      "question": "什么是何尊？",
+      "source_id": "cmrc-train:1442:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 28,
+          "text": "挪威沿大西洋海岸的地域"
+        }
+      ],
+      "doc_id": "b61af75be4abe6dd45bb156d7a5797195e58f6c5710add39779932c398fd46ab",
+      "family_id": "b9f4cccf32a4f15bd00f3d5e5bb25bdb19dbb04b07b9dcffbc68fac74d2b6258",
+      "id": "TRAIN_1267_QUERY_0",
+      "question": "西挪威是指什么地区？",
+      "source_id": "cmrc-train:907:0",
+      "split": "holdout"
+    },
+    {
+      "answers": [
+        {
+          "start": 52,
+          "text": "费萨尔一世"
+        }
+      ],
+      "doc_id": "98fb4fb08891b693c9fee19da552d802af2356f2f16e580927fecf8d4175a6c1",
+      "family_id": "f6367c96199888f9904719bff3fcf879d991d9ecdcc673a06a4521db32001315",
+      "id": "TRAIN_851_QUERY_0",
+      "question": "谁即位伊拉克王国成为了一个主权独立的国家？",
+      "source_id": "cmrc-train:522:0",
+      "split": "holdout"
+    },
+    {
+      "id": "missing-private-0",
+      "question": "私有工单 CASE-20260921-0 的一次性验证码是什么？",
+      "answers": [],
+      "doc_id": null
+    },
+    {
+      "id": "missing-private-1",
+      "question": "私有工单 CASE-20260921-1 的一次性验证码是什么？",
+      "answers": [],
+      "doc_id": null
+    },
+    {
+      "id": "missing-private-2",
+      "question": "私有工单 CASE-20260921-2 的一次性验证码是什么？",
+      "answers": [],
+      "doc_id": null
+    },
+    {
+      "id": "missing-private-3",
+      "question": "私有工单 CASE-20260921-3 的一次性验证码是什么？",
+      "answers": [],
+      "doc_id": null
+    },
+    {
+      "id": "missing-private-4",
+      "question": "私有工单 CASE-20260921-4 的一次性验证码是什么？",
+      "answers": [],
+      "doc_id": null
+    },
+    {
+      "id": "missing-private-5",
+      "question": "私有工单 CASE-20260921-5 的一次性验证码是什么？",
+      "answers": [],
+      "doc_id": null
+    },
+    {
+      "id": "missing-private-6",
+      "question": "私有工单 CASE-20260921-6 的一次性验证码是什么？",
+      "answers": [],
+      "doc_id": null
+    },
+    {
+      "id": "missing-private-7",
+      "question": "私有工单 CASE-20260921-7 的一次性验证码是什么？",
+      "answers": [],
+      "doc_id": null
+    }
+  ],
+  "model_snapshot": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "arms": [
+    1,
+    3
+  ],
+  "size": 160,
+  "stride": 80,
+  "hypothesis": "Top-3 improves answer EM over top-1 without increasing false refusal or unsupported citations.",
+  "success": "higher answerable EM, no lower correct refusal or gold citation support; descriptive pilot only",
+  "failure": "unchanged/worse EM or refusal tradeoff; preserve all outputs; no tuning on these questions",
+  "scope": "24 hash-selected existing holdout questions + 8 authored missing-private-information probes; not a fresh blind holdout",
+  "generation": {
+    "max_new_tokens": 80,
+    "sample": false,
+    "device": "cpu",
+    "dtype": "float32"
+  },
+  "frozen_utc": "2026-09-21T13:43:46Z"
+}

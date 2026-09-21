@@ -1,0 +1,146 @@
+{
+  "json": {
+    "n": 12,
+    "positive_n": 8,
+    "negative_n": 4,
+    "answerable_exact_matches": 0,
+    "retrieval_hits": 7,
+    "false_refusals": 5,
+    "negative_false_answers": 0,
+    "answered": 3,
+    "valid_quotes": 3,
+    "reference_supported": 0,
+    "model_calls": 12,
+    "mean_seconds": 1.7950523645819583,
+    "failures": [
+      {
+        "id": "TRAIN_2020_QUERY_0",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_644_QUERY_4",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_1598_QUERY_2",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3097_QUERY_4",
+        "reason": "invalid_json"
+      },
+      {
+        "id": "TRAIN_972_QUERY_1",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_3051_QUERY_2",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_1294_QUERY_4",
+        "reason": "quoted"
+      },
+      {
+        "id": "TRAIN_3129_QUERY_0",
+        "reason": "unsupported_quote"
+      }
+    ]
+  },
+  "span": {
+    "n": 12,
+    "positive_n": 8,
+    "negative_n": 4,
+    "answerable_exact_matches": 0,
+    "retrieval_hits": 7,
+    "false_refusals": 8,
+    "negative_false_answers": 0,
+    "answered": 0,
+    "valid_quotes": 0,
+    "reference_supported": 0,
+    "model_calls": 12,
+    "mean_seconds": 0.7430753369147473,
+    "failures": [
+      {
+        "id": "TRAIN_2020_QUERY_0",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_644_QUERY_4",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_1598_QUERY_2",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_3097_QUERY_4",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_972_QUERY_1",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_3051_QUERY_2",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_1294_QUERY_4",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_3129_QUERY_0",
+        "reason": "model_abstained"
+      }
+    ]
+  },
+  "verified_span": {
+    "n": 12,
+    "positive_n": 8,
+    "negative_n": 4,
+    "answerable_exact_matches": 0,
+    "retrieval_hits": 7,
+    "false_refusals": 8,
+    "negative_false_answers": 0,
+    "answered": 0,
+    "valid_quotes": 0,
+    "reference_supported": 0,
+    "model_calls": 12,
+    "mean_seconds": 0.7408304547504182,
+    "failures": [
+      {
+        "id": "TRAIN_2020_QUERY_0",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_644_QUERY_4",
+        "reason": "ambiguous_quote"
+      },
+      {
+        "id": "TRAIN_1598_QUERY_2",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_3097_QUERY_4",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_972_QUERY_1",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_3051_QUERY_2",
+        "reason": "model_abstained"
+      },
+      {
+        "id": "TRAIN_1294_QUERY_4",
+        "reason": "unsupported_quote"
+      },
+      {
+        "id": "TRAIN_3129_QUERY_0",
+        "reason": "model_abstained"
+      }
+    ]
+  }
+}

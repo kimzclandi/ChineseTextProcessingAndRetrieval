@@ -1,0 +1,217 @@
+{
+  "version": "span-qa-v1",
+  "split": "dev",
+  "queries": [
+    {
+      "answers": [
+        {
+          "start": 8,
+          "text": "任天堂DS或Game Boy Advance上的一种存储介质，通过它，可以使NDS或GBA机器对存储芯片内的各种文件进行读取。"
+        }
+      ],
+      "doc_id": "e8b62af63eea76f679b23b40778a788dd4669c46161c3794215d3298f231272f",
+      "family_id": "8f071360826110a65cf362e164e9aef1259f08a03273e66e8bac8b593405e0d5",
+      "id": "TRAIN_2020_QUERY_0",
+      "question": "烧录卡是什么？",
+      "source_id": "cmrc-train:1284:0",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 111,
+          "text": "因为结构构件上的任一点，都应有机会具有自由度"
+        }
+      ],
+      "doc_id": "b6da75b15dca2a06fdb75b34fdc6a30240f99056fb25d451dd399e2218c2c4c7",
+      "family_id": "ada82599aecaf66fd4f1a47fd53a1ba3340757a9a64939e764ad615f4a599e47",
+      "id": "TRAIN_3122_QUERY_1",
+      "question": "为什么称之为有效？",
+      "source_id": "cmrc-train:2113:0",
+      "split": "dev",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 119,
+          "text": "帝国曾发生几次叛乱。"
+        }
+      ],
+      "doc_id": "affb49969ccbb7b7b7c6822961f9597ac6a7790ba4ba25337561aea5a911520a",
+      "family_id": "8a3b3fa56ac0fb37181d0256d392dcce35b8fd58d2cb326aa737a39379277940",
+      "id": "TRAIN_2511_QUERY_2",
+      "question": "在他统治期间，帝国曾发生过叛乱吗？",
+      "source_id": "cmrc-train:1765:0",
+      "split": "dev",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 373,
+          "text": "子卡洛"
+        }
+      ],
+      "doc_id": "87bbe288b70533c426813d648ddc49df454c8b4e47ea109410363922fffcc4a9",
+      "family_id": "f8117f95960b981829d7292d0a015f621267546259ad4f4ce8f3f4b42297977a",
+      "id": "TRAIN_644_QUERY_4",
+      "question": "费迪南多去世后谁继承了他的族长位置？",
+      "source_id": "cmrc-train:77:0",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 375,
+          "text": "1980年代开始，香港的经济自由度指数经常都是自由放任往往很多外商等人士到港通商"
+        }
+      ],
+      "doc_id": "461db0647106e4ebf09a98b7e3f5c5d2b118d9851e12ad113878c2aaf9a8ba49",
+      "family_id": "38e46ba9c0698adc6db566c5ef0bcb732f35e0c06b2aa6984870fe0ab7292574",
+      "id": "TRAIN_1598_QUERY_2",
+      "question": "香港自1994年能每年成为全球最自由经济体系的其中一个原因是什么？",
+      "source_id": "cmrc-train:1077:0",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 273,
+          "text": "陵墓直径90米，高42米。"
+        }
+      ],
+      "doc_id": "2a70ab8741c493d6152611c221aafa7a4ac9c434e5c514b1495936d96e6c3ff9",
+      "family_id": "2e0ca5c2337470eb3ab0a69a95e113774f993f8290325275bcbd5e3dd697d2f3",
+      "id": "TRAIN_3097_QUERY_4",
+      "question": "陵墓的直径和高是多少？",
+      "source_id": "cmrc-train:2088:0",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 54,
+          "text": "在外卡赛上，由于四位评审无法从他和另外一位参赛者─Matt Giraud中选取，因此他成为美国偶像历史性的第十三强决赛者。"
+        }
+      ],
+      "doc_id": "5dfd466b2e8f92dba68925d917c2ee1bf05a6e272e071e3d9480b2a54fe6420b",
+      "family_id": "2598f92e9fe32a6f0d74354804d5f686775433dc08eaa5894c0c7a87961bdfff",
+      "id": "TRAIN_972_QUERY_1",
+      "question": "亚努皮·迪赛为什么成为美国偶像历史性的第十三强决赛者？",
+      "source_id": "cmrc-train:457:0",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 19,
+          "text": "香港浸会大学"
+        }
+      ],
+      "doc_id": "65106f3c9e40e83c5947a6261c237a4e676840df797e55d48984a0dbede8b041",
+      "family_id": "a51dba2c6e35fa7bf7a72d9ea2a23b3550e9c2da26fd0a952d10ab69bec5996e",
+      "id": "TRAIN_3051_QUERY_2",
+      "question": "朱少璋在哪所大学获得博士学位？",
+      "source_id": "cmrc-train:2047:0",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 84,
+          "text": "朝拜九华山的信徒必先到此进香"
+        }
+      ],
+      "doc_id": "ee0f297c8f051346847e3592bfb1716d02af94528bb5eb852a5b7d1c279b7d3c",
+      "family_id": "0d767e1ecf549864181dbae8cda4dc3290fc59c41e3479e980696a7ae92f7590",
+      "id": "TRAIN_1294_QUERY_4",
+      "question": "广济寺为什么又被称为“小九华”？",
+      "source_id": "cmrc-train:934:0",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 0,
+          "text": "在数学里，术语定义良好（定义良好的 ，名词 ）用于确认用一组基本公理以数学或逻辑的方式定义的某个概念或对象（一个函数，性质，关系，等等）是完全无歧义的，满足它必需满足的那些性质。"
+        }
+      ],
+      "doc_id": "ec7791f5a205a3891a99836399484f8da6f72fd0950a3b36664216f0db22e56d",
+      "family_id": "8e9d771df1bcfe2ae171d15e1e830e5e562f9ad36992de89136e78f34749b975",
+      "id": "TRAIN_623_QUERY_0",
+      "question": "在数学里，对术语定义良好是如何界定的？",
+      "source_id": "cmrc-train:92:0",
+      "split": "dev",
+      "answerable": false
+    },
+    {
+      "answers": [
+        {
+          "start": 0,
+          "text": "过冷（Supercooling，又译超冷冻）是一种物理现象，透过降低液体或气体的温度，但不使其凝固的过程，能做到让水瞬间凝冰的效果。"
+        }
+      ],
+      "doc_id": "e911ba3d9929ec8d78dc7494e86b5873e482522eb009278a8ddcc797733244d0",
+      "family_id": "fe1ef926e0a25a8778df12023633fe5cb327e4bc734afe97975f83b80401511d",
+      "id": "TRAIN_3129_QUERY_0",
+      "question": "什么是过冷？",
+      "source_id": "cmrc-train:2120:0",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "answers": [
+        {
+          "start": 43,
+          "text": "包括负责跆拳道品、段考试及发放品、段证书，并且从事跆拳道的研究事务"
+        }
+      ],
+      "doc_id": "13bce2e6f4540a06473140e6f6c02c2201a065f210188924c0a27cdc168ddeab",
+      "family_id": "0ccd63e6ec7eccc90d64bdc31ca48f0a83061d09310c5772e6e59e55fcd5c850",
+      "id": "TRAIN_989_QUERY_3",
+      "question": "国技院的功能有哪些？",
+      "source_id": "cmrc-train:100:0",
+      "split": "dev",
+      "answerable": false
+    }
+  ],
+  "corpus_sha256": "c41747c822496f8da85fcf58ae028338289f36e63b24b738c6a56f18c949201d",
+  "withheld_document_ids": [
+    "13bce2e6f4540a06473140e6f6c02c2201a065f210188924c0a27cdc168ddeab",
+    "affb49969ccbb7b7b7c6822961f9597ac6a7790ba4ba25337561aea5a911520a",
+    "b6da75b15dca2a06fdb75b34fdc6a30240f99056fb25d451dd399e2218c2c4c7",
+    "ec7791f5a205a3891a99836399484f8da6f72fd0950a3b36664216f0db22e56d"
+  ],
+  "source_documents_sha256": "bac8b8121d6db4cc3d2dca028f188708ff6f8b1e6525893ef356cd8c7f4dea7d",
+  "arms": [
+    "json",
+    "span",
+    "verified_span"
+  ],
+  "k": 3,
+  "size": 160,
+  "stride": 80,
+  "extract_prompt": "完成阅读理解，从参考材料中提取问题的答案。答案使用材料原文，尽量简短。有答案时必须回答；确实没有答案时回答 NO_ANSWER。只写答案，不写解释。\n示例一\n材料：青松站于1998年开放。\n问题：青松站何时开放？\n答案：1998年\n示例二\n材料：紫桥位于海州市。\n问题：紫桥位于哪里？\n答案：海州市\n示例三\n材料：紫桥位于海州市。\n问题：紫桥有多长？\n答案：NO_ANSWER\n",
+  "verify_prompt": "判断引文是否直接回答问题。仅有相同主题或词语不算支持。答案必须回答问题所问的具体属性，不能依赖外部知识。支持只输出 YES；不支持、信息不完整或不能确定只输出 NO。\n",
+  "snapshot_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "generation": {
+    "max_new_tokens_per_call": 80,
+    "do_sample": false,
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4
+  },
+  "hypothesis": "Deterministic citation binding reduces format loss; a separate relevance decision reduces source-withheld false answers.",
+  "success": "Holdout span arm improves answerable exact matches by >=3/32 over JSON and does not increase false answers on 12 withheld-source probes; verifier must improve negative errors without losing positive EM.",
+  "failure": "Any unmet condition retained; no holdout-driven prompt revision or reroll.",
+  "scope": "QA-generation-disjoint from prior 24 questions, one question per family; historical retrieval holdout has been evaluated before. Negative labels mean withholding the sole exact-reference source, not universal world-knowledge absence.",
+  "frozen_utc": "2026-09-21T14:18:52Z"
+}
