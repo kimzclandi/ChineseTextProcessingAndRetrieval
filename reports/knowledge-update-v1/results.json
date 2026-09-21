@@ -1,0 +1,324 @@
+[
+  {
+    "id": "updated",
+    "version": "before",
+    "expected": "七天",
+    "correct": false,
+    "result": {
+      "question": "蓝杉商店的退货期限是多久？",
+      "snapshot": "22976352db88dcae42d539369c9f8b073c4c4d27fb544b13f713ebe36281a5b0",
+      "hits": [
+        {
+          "chunk_id": "dd54ff99daea4de5ab18bca438d99ae4824e75f2fa39a523885a3cefdf4c6130",
+          "doc_id": "returns",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店的退货期限是七天。",
+          "score": 9.083191440511037
+        },
+        {
+          "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+          "doc_id": "shipping",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店使用顺丰快递发货。",
+          "score": 1.4585724543516372
+        }
+      ],
+      "raw_output": "{\"answer\": \"7天\", \"citation\": 1}",
+      "answer": "NO_ANSWER",
+      "citation": null,
+      "reason": "unsupported_quote",
+      "candidate": {
+        "answer": "7天",
+        "citation": 1
+      }
+    }
+  },
+  {
+    "id": "stable",
+    "version": "before",
+    "expected": "顺丰快递",
+    "correct": true,
+    "result": {
+      "question": "蓝杉商店使用什么快递发货？",
+      "snapshot": "22976352db88dcae42d539369c9f8b073c4c4d27fb544b13f713ebe36281a5b0",
+      "hits": [
+        {
+          "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+          "doc_id": "shipping",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店使用顺丰快递发货。",
+          "score": 8.390044259951091
+        },
+        {
+          "chunk_id": "dd54ff99daea4de5ab18bca438d99ae4824e75f2fa39a523885a3cefdf4c6130",
+          "doc_id": "returns",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店的退货期限是七天。",
+          "score": 1.4585724543516372
+        }
+      ],
+      "raw_output": "{\"answer\": \"顺丰快递\", \"citation\": 1}",
+      "answer": "顺丰快递",
+      "citation": {
+        "doc_id": "shipping",
+        "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+        "start": 6,
+        "end": 10,
+        "snapshot": "22976352db88dcae42d539369c9f8b073c4c4d27fb544b13f713ebe36281a5b0"
+      },
+      "reason": "quoted",
+      "candidate": {
+        "answer": "顺丰快递",
+        "citation": 1
+      }
+    }
+  },
+  {
+    "id": "new",
+    "version": "before",
+    "expected": "NO_ANSWER",
+    "correct": true,
+    "result": {
+      "question": "蓝杉商店的人工客服营业时间是什么？",
+      "snapshot": "22976352db88dcae42d539369c9f8b073c4c4d27fb544b13f713ebe36281a5b0",
+      "hits": [
+        {
+          "chunk_id": "dd54ff99daea4de5ab18bca438d99ae4824e75f2fa39a523885a3cefdf4c6130",
+          "doc_id": "returns",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店的退货期限是七天。",
+          "score": 3.355692439237518
+        },
+        {
+          "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+          "doc_id": "shipping",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店使用顺丰快递发货。",
+          "score": 1.2762508975576825
+        }
+      ],
+      "raw_output": "{\"answer\": \"7天，顺丰快递发货\"}",
+      "answer": "NO_ANSWER",
+      "citation": null,
+      "reason": "invalid_json"
+    }
+  },
+  {
+    "id": "missing",
+    "version": "before",
+    "expected": "NO_ANSWER",
+    "correct": true,
+    "result": {
+      "question": "蓝杉商店的内部管理员密码是什么？",
+      "snapshot": "22976352db88dcae42d539369c9f8b073c4c4d27fb544b13f713ebe36281a5b0",
+      "hits": [
+        {
+          "chunk_id": "dd54ff99daea4de5ab18bca438d99ae4824e75f2fa39a523885a3cefdf4c6130",
+          "doc_id": "returns",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店的退货期限是七天。",
+          "score": 3.355692439237518
+        },
+        {
+          "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+          "doc_id": "shipping",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店使用顺丰快递发货。",
+          "score": 1.2762508975576825
+        }
+      ],
+      "raw_output": "{\"answer\": \"7天，顺丰快递\"}",
+      "answer": "NO_ANSWER",
+      "citation": null,
+      "reason": "invalid_json"
+    }
+  },
+  {
+    "id": "updated",
+    "version": "after",
+    "expected": "十四天",
+    "correct": false,
+    "result": {
+      "question": "蓝杉商店的退货期限是多久？",
+      "snapshot": "5c18c6c5f6ba993baf027221956352c7b3756c98c1b167fad81a247b0af33c3c",
+      "hits": [
+        {
+          "chunk_id": "9f4c00e5ea239960a12052ec2a39c5d8fe72864f94e58c5c69c8fb0ce0ab8e1d",
+          "doc_id": "returns",
+          "start": 0,
+          "end": 14,
+          "text": "蓝杉商店的退货期限是十四天。",
+          "score": 11.298925197123067
+        },
+        {
+          "chunk_id": "2f35273f17d536234548a9256cbdda554f11bdc371d059d638fd42d7f9bebbd3",
+          "doc_id": "hours",
+          "start": 0,
+          "end": 21,
+          "text": "蓝杉商店的人工客服营业时间是九点到十八点。",
+          "score": 2.0548600904360663
+        },
+        {
+          "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+          "doc_id": "shipping",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店使用顺丰快递发货。",
+          "score": 1.534612183082016
+        }
+      ],
+      "raw_output": "{\"answer\": \"蓝杉商店的退货期限是十四天。\"}",
+      "answer": "NO_ANSWER",
+      "citation": null,
+      "reason": "invalid_json"
+    }
+  },
+  {
+    "id": "stable",
+    "version": "after",
+    "expected": "顺丰快递",
+    "correct": true,
+    "result": {
+      "question": "蓝杉商店使用什么快递发货？",
+      "snapshot": "5c18c6c5f6ba993baf027221956352c7b3756c98c1b167fad81a247b0af33c3c",
+      "hits": [
+        {
+          "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+          "doc_id": "shipping",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店使用顺丰快递发货。",
+          "score": 12.249835871806011
+        },
+        {
+          "chunk_id": "9f4c00e5ea239960a12052ec2a39c5d8fe72864f94e58c5c69c8fb0ce0ab8e1d",
+          "doc_id": "returns",
+          "start": 0,
+          "end": 14,
+          "text": "蓝杉商店的退货期限是十四天。",
+          "score": 1.4887267689699293
+        },
+        {
+          "chunk_id": "2f35273f17d536234548a9256cbdda554f11bdc371d059d638fd42d7f9bebbd3",
+          "doc_id": "hours",
+          "start": 0,
+          "end": 21,
+          "text": "蓝杉商店的人工客服营业时间是九点到十八点。",
+          "score": 0.819163735523514
+        }
+      ],
+      "raw_output": "{\"answer\": \"顺丰快递\", \"citation\": 1}",
+      "answer": "顺丰快递",
+      "citation": {
+        "doc_id": "shipping",
+        "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+        "start": 6,
+        "end": 10,
+        "snapshot": "5c18c6c5f6ba993baf027221956352c7b3756c98c1b167fad81a247b0af33c3c"
+      },
+      "reason": "quoted",
+      "candidate": {
+        "answer": "顺丰快递",
+        "citation": 1
+      }
+    }
+  },
+  {
+    "id": "new",
+    "version": "after",
+    "expected": "九点到十八点",
+    "correct": false,
+    "result": {
+      "question": "蓝杉商店的人工客服营业时间是什么？",
+      "snapshot": "5c18c6c5f6ba993baf027221956352c7b3756c98c1b167fad81a247b0af33c3c",
+      "hits": [
+        {
+          "chunk_id": "2f35273f17d536234548a9256cbdda554f11bdc371d059d638fd42d7f9bebbd3",
+          "doc_id": "hours",
+          "start": 0,
+          "end": 21,
+          "text": "蓝杉商店的人工客服营业时间是九点到十八点。",
+          "score": 16.66759920879484
+        },
+        {
+          "chunk_id": "9f4c00e5ea239960a12052ec2a39c5d8fe72864f94e58c5c69c8fb0ce0ab8e1d",
+          "doc_id": "returns",
+          "start": 0,
+          "end": 14,
+          "text": "蓝杉商店的退货期限是十四天。",
+          "score": 2.484947086108731
+        },
+        {
+          "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+          "doc_id": "shipping",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店使用顺丰快递发货。",
+          "score": 1.0211493141457502
+        }
+      ],
+      "raw_output": "{\"answer\": \"9:00-18:00，14天，顺丰快递\"}",
+      "answer": "NO_ANSWER",
+      "citation": null,
+      "reason": "invalid_json"
+    }
+  },
+  {
+    "id": "missing",
+    "version": "after",
+    "expected": "NO_ANSWER",
+    "correct": false,
+    "result": {
+      "question": "蓝杉商店的内部管理员密码是什么？",
+      "snapshot": "5c18c6c5f6ba993baf027221956352c7b3756c98c1b167fad81a247b0af33c3c",
+      "hits": [
+        {
+          "chunk_id": "9f4c00e5ea239960a12052ec2a39c5d8fe72864f94e58c5c69c8fb0ce0ab8e1d",
+          "doc_id": "returns",
+          "start": 0,
+          "end": 14,
+          "text": "蓝杉商店的退货期限是十四天。",
+          "score": 2.484947086108731
+        },
+        {
+          "chunk_id": "2f35273f17d536234548a9256cbdda554f11bdc371d059d638fd42d7f9bebbd3",
+          "doc_id": "hours",
+          "start": 0,
+          "end": 21,
+          "text": "蓝杉商店的人工客服营业时间是九点到十八点。",
+          "score": 2.0548600904360663
+        },
+        {
+          "chunk_id": "e4e2b9a9541f8dd7647fcb82ffcc8eff7fdabff37db28259a8ce054170cf1665",
+          "doc_id": "shipping",
+          "start": 0,
+          "end": 13,
+          "text": "蓝杉商店使用顺丰快递发货。",
+          "score": 1.0211493141457502
+        }
+      ],
+      "raw_output": "{\"answer\": \"蓝杉商店的退货期限是十四天。\", \"citation\": 1}",
+      "answer": "蓝杉商店的退货期限是十四天。",
+      "citation": {
+        "doc_id": "returns",
+        "chunk_id": "9f4c00e5ea239960a12052ec2a39c5d8fe72864f94e58c5c69c8fb0ce0ab8e1d",
+        "start": 0,
+        "end": 14,
+        "snapshot": "5c18c6c5f6ba993baf027221956352c7b3756c98c1b167fad81a247b0af33c3c"
+      },
+      "reason": "quoted",
+      "candidate": {
+        "answer": "蓝杉商店的退货期限是十四天。",
+        "citation": 1
+      }
+    }
+  }
+]

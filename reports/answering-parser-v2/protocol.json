@@ -1,0 +1,7 @@
+{
+  "version": "rag-parser-replay-v2",
+  "kind": "post-hoc same-output parser comparison; no new model calls; not blind evaluation",
+  "source_predictions_sha256": "ff96e15ffa15fb16cbc2de5b32a8572e8f6b0cfc0f57d1441154d35091f34f78",
+  "hypothesis": "bounded code-fence handling recovers valid citations without allowing uncited prose",
+  "source_sha256": "9c452027e7d20b98e6ee00d352112478a1ec58bcd2368837400581ef6195f92f"
+}
