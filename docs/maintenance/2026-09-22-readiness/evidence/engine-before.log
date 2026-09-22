@@ -1,0 +1,138 @@
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+____________ test_stale_temp_cannot_overwrite_another_file[symlink] ____________
+
+tmp_path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-26/test_stale_temp_cannot_overwri0')
+kind = 'symlink'
+
+    @pytest.mark.parametrize('kind',['symlink','hardlink'])
+    def test_stale_temp_cannot_overwrite_another_file(tmp_path,kind):
+        victim=tmp_path/'victim';victim.write_text('keep')
+        stale=tmp_path/'state.json.tmp'
+        if kind=='symlink':stale.symlink_to(victim)
+        else:stale.hardlink_to(victim)
+        atomic_json(tmp_path/'state.json',{'ok':True})
+>       assert victim.read_text()=='keep'
+E       assert '{"ok":true}\n' == 'keep'
+E
+E         - keep
+E         + {"ok":true}
+
+tests/test_atomic_json.py:14: AssertionError
+___________ test_stale_temp_cannot_overwrite_another_file[hardlink] ____________
+
+tmp_path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-26/test_stale_temp_cannot_overwri1')
+kind = 'hardlink'
+
+    @pytest.mark.parametrize('kind',['symlink','hardlink'])
+    def test_stale_temp_cannot_overwrite_another_file(tmp_path,kind):
+        victim=tmp_path/'victim';victim.write_text('keep')
+        stale=tmp_path/'state.json.tmp'
+        if kind=='symlink':stale.symlink_to(victim)
+        else:stale.hardlink_to(victim)
+        atomic_json(tmp_path/'state.json',{'ok':True})
+>       assert victim.read_text()=='keep'
+E       assert '{"ok":true}\n' == 'keep'
+E
+E         - keep
+E         + {"ok":true}
+
+tests/test_atomic_json.py:14: AssertionError
+________ test_failure_preserves_target_and_removes_own_temp[serialize] _________
+
+tmp_path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-26/test_failure_preserves_target_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x108b18e90>
+failure = 'serialize'
+
+    @pytest.mark.parametrize('failure',['serialize','replace'])
+    def test_failure_preserves_target_and_removes_own_temp(tmp_path,monkeypatch,failure):
+        import engine.common as common
+        target=tmp_path/'state.json';target.write_text('{"old":true}')
+        if failure=='replace':
+            def fail(*args):raise OSError('injected replace failure')
+            monkeypatch.setattr(common.os,'replace',fail)
+        with pytest.raises((TypeError,OSError)):
+            atomic_json(target,object() if failure=='serialize' else {'new':True})
+        assert json.loads(target.read_text())=={'old':True}
+>       assert sorted(p.name for p in tmp_path.iterdir())==['state.json']
+E       AssertionError: assert ['state.json'...ate.json.tmp'] == ['state.json']
+E
+E         Left contains one more item: 'state.json.tmp'
+E         Use -v to get more diff
+
+tests/test_atomic_json.py:27: AssertionError
+_________ test_failure_preserves_target_and_removes_own_temp[replace] __________
+
+tmp_path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-26/test_failure_preserves_target_1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x108b18800>
+failure = 'replace'
+
+    @pytest.mark.parametrize('failure',['serialize','replace'])
+    def test_failure_preserves_target_and_removes_own_temp(tmp_path,monkeypatch,failure):
+        import engine.common as common
+        target=tmp_path/'state.json';target.write_text('{"old":true}')
+        if failure=='replace':
+            def fail(*args):raise OSError('injected replace failure')
+            monkeypatch.setattr(common.os,'replace',fail)
+        with pytest.raises((TypeError,OSError)):
+            atomic_json(target,object() if failure=='serialize' else {'new':True})
+        assert json.loads(target.read_text())=={'old':True}
+>       assert sorted(p.name for p in tmp_path.iterdir())==['state.json']
+E       AssertionError: assert ['state.json'...ate.json.tmp'] == ['state.json']
+E
+E         Left contains one more item: 'state.json.tmp'
+E         Use -v to get more diff
+
+tests/test_atomic_json.py:27: AssertionError
+______________ test_concurrent_writers_publish_one_complete_value ______________
+
+tmp_path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-26/test_concurrent_writers_publis0')
+
+    def test_concurrent_writers_publish_one_complete_value(tmp_path):
+        target=tmp_path/'state.json'
+        values=[{'writer':i,'body':str(i)*1000} for i in range(20)]
+>       with ThreadPoolExecutor(max_workers=8) as pool:list(pool.map(lambda v:atomic_json(target,v),values))
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_atomic_json.py:32:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+<USER_HOME>/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py:619: in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<USER_HOME>/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py:317: in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+<USER_HOME>/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py:449: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+<USER_HOME>/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+<USER_HOME>/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/concurrent/futures/thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_atomic_json.py:32: in <lambda>
+    with ThreadPoolExecutor(max_workers=8) as pool:list(pool.map(lambda v:atomic_json(target,v),values))
+                                                                          ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = PosixPath('<TEMP>/pytest-of-<LOCAL_USER>/pytest-26/test_concurrent_writers_publis0/state.json')
+value = {'body': '222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222...22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222', 'writer': 2}
+
+    def atomic_json(path, value):
+        path = Path(path)
+        temp = path.with_suffix(path.suffix+'.tmp')
+        with temp.open('w') as f:
+            f.write(stable(value)+'\n')
+            f.flush()
+            os.fsync(f.fileno())
+>       os.replace(temp, path)
+E       FileNotFoundError: [Errno 2] No such file or directory: '<TEMP>/pytest-of-<LOCAL_USER>/pytest-26/test_concurrent_writers_publis0/state.json.tmp' -> '<TEMP>/pytest-of-<LOCAL_USER>/pytest-26/test_concurrent_writers_publis0/state.json'
+
+engine/common.py:40: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_atomic_json.py::test_stale_temp_cannot_overwrite_another_file[symlink]
+FAILED tests/test_atomic_json.py::test_stale_temp_cannot_overwrite_another_file[hardlink]
+FAILED tests/test_atomic_json.py::test_failure_preserves_target_and_removes_own_temp[serialize]
+FAILED tests/test_atomic_json.py::test_failure_preserves_target_and_removes_own_temp[replace]
+FAILED tests/test_atomic_json.py::test_concurrent_writers_publish_one_complete_value
+5 failed in 0.03s
