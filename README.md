@@ -132,3 +132,5 @@ Project code: [MIT](LICENSE). Data and derived assets: [data licensing and attri
 [2026-09-22 implementation and verification](docs/maintenance/2026-09-22/README.md)
 
 [2026-09-22 detail review and regression fixes](docs/maintenance/2026-09-22-detail/README.md)
+
+Further review: [2026-09-22 evidence and export hardening](docs/maintenance/2026-09-22-readiness/README.md).

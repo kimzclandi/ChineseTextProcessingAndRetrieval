@@ -1,7 +1,6 @@
 import hashlib
 import json
 import os
-import tempfile
 from pathlib import Path
 
 
@@ -32,20 +31,10 @@ def write_jsonl(path, rows):
 
 
 def atomic_json(path, value):
-    """Publish one complete JSON value; last successful writer wins.
-
-    Unique same-directory temporary files prevent writer collisions and avoid
-    following stale deterministic .tmp links. This is not a multi-file transaction.
-    """
     path = Path(path)
-    payload = stable(value) + '\n'
-    fd, name = tempfile.mkstemp(prefix='.' + path.name + '.', suffix='.tmp', dir=path.parent)
-    temp = Path(name)
-    try:
-        with os.fdopen(fd, 'w', encoding='utf-8') as f:
-            f.write(payload)
-            f.flush()
-            os.fsync(f.fileno())
-        os.replace(temp, path)
-    finally:
-        temp.unlink(missing_ok=True)
+    temp = path.with_suffix(path.suffix+'.tmp')
+    with temp.open('w') as f:
+        f.write(stable(value)+'\n')
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(temp, path)

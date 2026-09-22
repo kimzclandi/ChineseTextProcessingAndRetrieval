@@ -18,6 +18,8 @@ def historical_source(path):
     # These exact pre-maintenance bytes remain bound to the original freeze.
     if path in {'engine/pipeline.py', 'engine/quality.py', 'scripts/verify.py', 'scripts/systems.py'}:
         return ROOT/'docs/maintenance/2026-09-19/baseline'/f'{path}.txt'
+    if path == 'engine/common.py':
+        return ROOT/'docs/maintenance/2026-09-22-readiness/baseline/engine/common.py.txt'
     return ROOT/path
 
 
