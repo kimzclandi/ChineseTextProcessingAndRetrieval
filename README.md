@@ -130,3 +130,5 @@ Project code: [MIT](LICENSE). Data and derived assets: [data licensing and attri
 [项目名称与兼容性说明 / Naming and compatibility](docs/NAMING.md)
 
 [2026-09-22 implementation and verification](docs/maintenance/2026-09-22/README.md)
+
+[2026-09-22 detail review and regression fixes](docs/maintenance/2026-09-22-detail/README.md)

@@ -5,7 +5,7 @@ from engine.pipeline import run, connect, registered_snapshot
 
 ROWS = [{'source_id': 'a', 'title': 'fixture', 'text': 'synthetic text'}]
 
-@pytest.mark.parametrize('fault', ['extra_file', 'symlink', 'directory'])
+@pytest.mark.parametrize('fault', ['extra_file', 'symlink', 'hardlink', 'directory'])
 def test_staging_fault_is_rejected_before_publish(tmp_path, fault):
     with pytest.raises(RuntimeError):
         run(ROWS, tmp_path, fail_after=1)
@@ -16,6 +16,8 @@ def test_staging_fault_is_rejected_before_publish(tmp_path, fault):
         (stage / 'unexpected.txt').write_text('unexpected')
     elif fault == 'symlink':
         (stage / 'documents.jsonl').symlink_to(outside)
+    elif fault == 'hardlink':
+        (stage / 'documents.jsonl').hardlink_to(outside)
     else:
         (stage / 'documents.jsonl').mkdir()
     with pytest.raises(ValueError, match='Staging'):
