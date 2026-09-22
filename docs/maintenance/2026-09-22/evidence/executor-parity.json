@@ -1,0 +1,29 @@
+{
+  "input_rows": 2403,
+  "ray_cpus": 2,
+  "ray_version": "2.54.0",
+  "ray_startup_seconds": 1.8925760419951985,
+  "serial": {
+    "version": "a68b2cfe0d0626a1666c2fd6",
+    "reused_snapshot": false,
+    "resumed_shards": 0,
+    "processed_shards": 256,
+    "wall_seconds": 0.2761512080032844
+  },
+  "ray": {
+    "version": "a68b2cfe0d0626a1666c2fd6",
+    "reused_snapshot": false,
+    "resumed_shards": 0,
+    "processed_shards": 256,
+    "wall_seconds": 1.0468372500035912
+  },
+  "byte_equality": {
+    "quarantine.jsonl": true,
+    "lineage.jsonl": true,
+    "input-record-hashes.json": true,
+    "documents.parquet": true,
+    "manifest.json": true,
+    "documents.jsonl": true
+  },
+  "scope": "real CMRC processing, one worker exit/retry; single-host correctness, not performance comparison"
+}

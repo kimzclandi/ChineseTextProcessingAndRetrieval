@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-09-22T05:09:33.283567+00:00",
+  "input_rows": 2403,
+  "input_sha256": "5fb01a52edb0eb588df7c80054df9f884c6e79104a64e346452d577c6efe87ca",
+  "code_sha256": {
+    "scripts/check_executor_parity.py": "d20b2caec7fcc7db45d8d0146b0543dd44bfa37d5663ac7ddc6b153066395e3b",
+    "engine/pipeline.py": "303a3cc51544f58d4c7aa0acb4e420b131f4986d70f42f47b462799b9c8744d8",
+    "engine/common.py": "4ce0d17e6e06735fb2d3f5eab94749542b288df301e2c27a2e0e2530b7201d76",
+    "engine/quality.py": "8c7fb374c156aac9520fcfaf71fd117c3ea3eb0e11124145fdd04337eaad3e8f"
+  },
+  "ray_cpus": 2,
+  "ray_version": "2.54.0",
+  "ray_startup_seconds": 1.9777090839925222,
+  "serial": {
+    "version": "2f47e6893097b45115509287",
+    "reused_snapshot": false,
+    "resumed_shards": 0,
+    "processed_shards": 256,
+    "wall_seconds": 0.33043408300727606
+  },
+  "ray": {
+    "version": "2f47e6893097b45115509287",
+    "reused_snapshot": false,
+    "resumed_shards": 0,
+    "processed_shards": 256,
+    "wall_seconds": 1.024280458004796
+  },
+  "byte_equality": {
+    "documents.jsonl": true,
+    "documents.parquet": true,
+    "input-record-hashes.json": true,
+    "lineage.jsonl": true,
+    "manifest.json": true,
+    "quarantine.jsonl": true
+  },
+  "worker_interruption_marker": true,
+  "scope": "real CMRC processing, one worker exit/retry; single-host correctness, not performance comparison"
+}
