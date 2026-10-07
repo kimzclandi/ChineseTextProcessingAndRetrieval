@@ -105,14 +105,7 @@ def verify(output):
             x=a.search(q['question'],spec['k']);y=b.search(q['question'],spec['k'])
             if x!=y:raise ValueError('Current code output differs')
             evidence.append(dict(index=index,id=q['id'],hits=[dict(chunk_id=c['chunk_id'],score=s) for c,s in x]))
-    # Same-runtime reference/candidate above remain bit-exact. Across libm
-    # implementations use the repository's existing 1e-12 archive tolerance.
-    from scripts.verify_portable import compare_hits
-    saved=json.loads((output/'equivalence.json').read_text())
-    if len(saved)!=len(evidence):raise ValueError('Archived query coverage differs')
-    for a,b in zip(evidence,saved):
-        if (a['index'],a['id'])!=(b['index'],b['id']):raise ValueError('Archived query order differs')
-        compare_hits(a['hits'],b['hits'])
+    if evidence!=json.loads((output/'equivalence.json').read_text()):raise ValueError('Archived exact-output evidence differs')
     result=summarize(json.loads((output/'timings.json').read_text()),spec,[q['id'] for q in queries])
     if result!=json.loads((output/'summary.json').read_text()):raise ValueError('Timing summary differs')
     return result

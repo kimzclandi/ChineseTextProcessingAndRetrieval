@@ -26,3 +26,5 @@ git diff --check
 ```
 
 [原CI定义](../.github/workflows/offline.yml)还执行隔离的portable串行重建；它不重写冻结输出，不运行新的Ray性能实验。轻量CI未安装Ray，不能称为2-CPU故障实验的新一次执行。历史2-CPU证据以源hash、清单和原始日志核验。
+
+[新增精确结果查询优化](BM25_EXACT_OPTIMIZATION.md)。与旧冻结实验分开保存，不替换历史结果。

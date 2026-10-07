@@ -1,0 +1,12 @@
+{
+  "build-seconds.json": "e87d5fae3120d99edbf3361497f0f348da8dfe59e2bdcb47d8525321f143ab1b",
+  "equivalence.json": "5c5ae30fb256f118e2470530cf751e42ba40f8a4f44a01fec4b89ee9728e7524",
+  "protocol.json": "907a6bf0377112c38154a6d9daaf8c2fec98f8be03cb12857719d7e1792bfcfc",
+  "run.json": "cc8703c54807fa49caccc270a00e6474b3589e2e0200abf03fe88939a1a6bbba",
+  "source/configs/bm25-exact-performance-v1.json": "fef0e3d7c5428af5ef2aac71c274921c7ed6c2309f004df967d65cc85e7ef852",
+  "source/engine/prepared_bm25.py": "ba03157f0790410cc095d95ef1d9b1df56ac76200e4724b188b21a9fe99666ab",
+  "source/engine/retrieval.py": "13f465eda16cc92a17369215e212a1066e4b926f8572f53046be659994672c7e",
+  "source/scripts/benchmark_prepared_bm25.py": "8c531162154bedc77280d0107d7f2600fec3ce93f5d0b2e08b1b1f5031b7750f",
+  "summary.json": "9340b4ad9b1c1ad6ead1bbaacef1940205fadb87dfcf2ecb121af8347d6bfa04",
+  "timings.json": "2ae4013ab6564bdd5cb0e64ec36cb1cc4ae405d85377170af42ae84e58e8b24a"
+}

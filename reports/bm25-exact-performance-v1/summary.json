@@ -1,0 +1,20 @@
+{
+  "baseline": {
+    "median_of_round_query_medians_seconds": {
+      "reference": 0.006507187500005784,
+      "prepared": 0.003473145999919325
+    },
+    "speedup": 1.873571540084101,
+    "faster_rounds": 5,
+    "passed": true
+  },
+  "candidate": {
+    "median_of_round_query_medians_seconds": {
+      "reference": 0.010050437500012777,
+      "prepared": 0.005396541499976593
+    },
+    "speedup": 1.8623849182029584,
+    "faster_rounds": 5,
+    "passed": true
+  }
+}
