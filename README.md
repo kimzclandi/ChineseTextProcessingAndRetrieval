@@ -51,6 +51,12 @@
 
 留出集净增加13题（+8.125个百分点），其中修复17题、回归4题；文档召回少1题。索引块数增加40.14%，查询变慢。开发集预登记门槛通过后才冻结并检查留出集，不依据留出集继续挑参数。[完整结果与逐题证据](reports/RESULTS.md)。
 
+## 规范名称与2-CPU补充证据
+
+规范仓库名为 **ChineseTextProcessingAndRetrieval**，中文名称为“中文文本数据处理与检索评测”，入口为 [GitHub仓库](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval)。旧链接与冻结历史中的旧名称仅作兼容记录。
+
+后续2-CPU Ray检查覆盖2,403行、256个分片及真实worker退出重试，六项输出逐字节一致。它与下方历史4-CPU系统实验分开记录，不是新的加速或多机证据。[代码、逐项记录与故障边界](docs/EVIDENCE_MAP.md)。
+
 ## 数据系统实测
 
 - **真实Ray Core任务**：单机4CPU、最多8个在途任务；纯函数算子、256个稳定内容哈希桶、每分片最多64行。未使用Ray Data流式执行、Spark/Flink或多机集群。
@@ -128,3 +134,9 @@ PYTHONPATH=. .venv/bin/python scripts/fetch_prepare.py --output work/fresh-sourc
 Project code: [MIT](LICENSE). Data and derived assets: [data licensing and attribution](DATA_LICENSE.md).
 
 [项目名称与兼容性说明 / Naming and compatibility](docs/NAMING.md)
+
+[2026-09-22 implementation and verification](docs/maintenance/2026-09-22/README.md)
+
+[2026-09-22 detail review and regression fixes](docs/maintenance/2026-09-22-detail/README.md)
+
+Further review: [2026-09-22 evidence and export hardening](docs/maintenance/2026-09-22-readiness/README.md).

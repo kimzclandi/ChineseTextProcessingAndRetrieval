@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-09-22T04:42:54.033272+00:00",
+  "timezone": "Asia/Singapore",
+  "source_commit": "9665b5afd62250e99fd7a520dfbef02f9d4e1a06",
+  "baseline_commit": "adef6a558fc14e9689868f7514939301dec66025",
+  "protected_prior_evidence_count": 102,
+  "changed_prior_evidence": [],
+  "scope": "Same-host follow-up, no new model inference/training/semantic annotation.",
+  "log_transform": "Public log and acceptance-diagnostic copies remove absolute home/temp locations, embedded local username, ANSI colors and trailing whitespace. Raw logs remain local.",
+  "validation": "Commands and tested dependency requirements are in the accompanying README; source commit binds tested implementation."
+}

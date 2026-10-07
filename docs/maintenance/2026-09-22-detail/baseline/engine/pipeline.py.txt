@@ -116,7 +116,7 @@ def run(records, lake, executor='serial', batch_size=64, fail_after=None, fault_
         if stage.is_symlink():raise ValueError('Staging directory must not be a symlink')
         stage.mkdir(parents=True,exist_ok=True)
         for path in stage.iterdir():
-            if path.name not in stage_files or path.is_symlink() or not path.is_file() or path.stat().st_nlink != 1:
+            if path.name not in stage_files or path.is_symlink() or not path.is_file():
                 raise ValueError('Staging file contract mismatch: '+path.name)
         (lake/'shard-cache').mkdir(exist_ok=True)
         buckets={}

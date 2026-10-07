@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<USER_HOME>/Documents/Codex/2026-09-22/github-readme-id-a194498-1-2/work/chinese-evidence-data-engine/../check_ray_parity_authorized.py", line 10, in <module>
+    ray.init(num_cpus=2,include_dashboard=False,object_store_memory=100*1024*1024,_temp_dir='/tmp/agent-data-parity-20260922-authorized')
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-<LOCAL_USER>/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-<LOCAL_USER>/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1908, in init
+    _global_node = ray._private.node.Node(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-<LOCAL_USER>/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/node.py", line 287, in __init__
+    self._plasma_store_socket_name = self._prepare_socket_file(
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-<LOCAL_USER>/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/node.py", line 980, in _prepare_socket_file
+    validate_socket_filepath(result.split("://", 1)[-1])
+  File "<USER_HOME>/Documents/Codex/2026-09-18/domain-qa-lab-ai-users-<LOCAL_USER>/outputs/chinese-evidence-data-engine/.venv/lib/python3.12/site-packages/ray/_private/utils.py", line 1665, in validate_socket_filepath
+    raise OSError(
+OSError: validate_socket_filename failed: AF_UNIX path length cannot exceed 103 bytes: /tmp/agent-data-parity-20260922-authorized/session_2026-09-22_04-09-40_794562_28556/sockets/plasma_store

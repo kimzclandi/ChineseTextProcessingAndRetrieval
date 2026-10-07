@@ -1,0 +1,47 @@
+{
+  "asset_byte_equality": {
+    "documents.jsonl": true,
+    "documents.parquet": true,
+    "lineage.jsonl": true,
+    "quarantine.jsonl": true
+  },
+  "dev_queries": 8,
+  "metrics": {
+    "baseline": {
+      "document_recall_at3": 0.875,
+      "failures": {
+        "source_not_retrieved": 1,
+        "success": 7
+      },
+      "latency_median_ms": 8.05285399837885,
+      "latency_p95_ms": 12.441624989151023,
+      "mrr_at3": 0.875,
+      "n": 8,
+      "oracle_span_coverage": 1.0,
+      "span_hit_at3": 0.875
+    },
+    "candidate": {
+      "document_recall_at3": 0.875,
+      "failures": {
+        "source_not_retrieved": 1,
+        "success": 7
+      },
+      "latency_median_ms": 13.203979011450429,
+      "latency_p95_ms": 23.779041002853774,
+      "mrr_at3": 0.8125,
+      "n": 8,
+      "oracle_span_coverage": 1.0,
+      "span_hit_at3": 0.875
+    }
+  },
+  "pipeline": {
+    "processed_shards": 256,
+    "resumed_shards": 0,
+    "reused_snapshot": false,
+    "version": "2f47e6893097b45115509287",
+    "wall_seconds": 0.2163643329986371
+  },
+  "scope": "Actual serial asset rebuild and BM25 execution; no Ray or model inference",
+  "score_abs_tol": 1e-12,
+  "score_rel_tol": 1e-12
+}

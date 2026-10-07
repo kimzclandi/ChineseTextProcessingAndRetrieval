@@ -1,0 +1,12 @@
+Using Python 3.12.13 environment at: work/readiness/engine-venv
+Resolved 6 packages in 428ms
+Downloading pyarrow (32.6MiB)
+ Downloaded pyarrow
+Prepared 1 package in 368ms
+Installed 6 packages in 9ms
+ + iniconfig==2.3.0
+ + packaging==26.3
+ + pluggy==1.6.0
+ + pyarrow==23.0.1
+ + pygments==2.21.0
+ + pytest==8.4.2

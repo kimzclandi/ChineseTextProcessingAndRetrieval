@@ -1,0 +1,16 @@
+{
+  "python": "3.12.13",
+  "dependencies": {
+    "pytest": "8.4.2",
+    "pyarrow": "23.0.1",
+    "ray": "2.54.0"
+  },
+  "commands": [
+    "python -m pytest -q (baseline 64)",
+    "python -m pytest -q tests/test_staging_publish.py (before: 3 failures)",
+    "python -m pytest -q (after 67)",
+    "PYTHONPATH=. python scripts/verify_portable.py",
+    "PYTHONPATH=. python scripts/reproduce_portable.py --output work/rebuild-20260922",
+    "PYTHONPATH=. python scripts/check_executor_parity.py --output work/parity-final"
+  ]
+}

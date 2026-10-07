@@ -1,0 +1,2 @@
+Source assertion probe with mismatched document bytes under python -O: exit 0
+Expected nonzero; full Ray was not run by this isolated probe.

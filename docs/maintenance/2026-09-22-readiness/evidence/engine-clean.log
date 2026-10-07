@@ -1,0 +1,6 @@
+........................................................................ [ 96%]
+...                                                                      [100%]
+75 passed in 1.15s
+Verified source/asset hashes, split families, raw answer offsets, all640 query-arm records, chunk budgets, gates, paired regressions and system evidence. Saved rankings only; use --rerank to execute retrieval again.
+{"max_absolute_score_difference": 0.0, "ordered_rankings": "exact", "query_arm_count": 640, "score_abs_tol": 1e-12, "score_rel_tol": 1e-12, "scores_compared": 1920, "scores_with_rounding_difference": 0}
+Rebuilt all assets; dev IDs, rankings and metrics matched with portable BM25 score tolerance.
