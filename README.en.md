@@ -124,3 +124,7 @@ This project produces data assets and retrieval evidence. [Small-model QA finetu
 Code: [MIT](LICENSE). Data and derived assets: [licensing and attribution](DATA_LICENSE.md).
 
 [Naming and compatibility](docs/NAMING.md)
+
+## Canonical name and later 2-CPU evidence
+
+The canonical repository is [ChineseTextProcessingAndRetrieval](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval), titled 中文文本数据处理与检索评测. Historical old names remain unchanged. A later 2-CPU Ray check processes 2,403 rows in 256 shards, including worker exit/retry, with six byte-identical output files. This is separate from the original 4-CPU systems experiment and establishes neither speedup nor multi-host reliability. [Code and evidence map](docs/EVIDENCE_MAP.md).
