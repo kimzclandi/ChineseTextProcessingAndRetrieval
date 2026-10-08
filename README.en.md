@@ -5,7 +5,7 @@
 ![Project wordmark](.github/project-header.svg)
 
 [![offline-evidence](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/workflows/offline.yml/badge.svg)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/workflows/offline.yml)
-[![Stars](https://img.shields.io/github/stars/kimzclandi/ChineseTextProcessingAndRetrieval?style=flat)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/kimzclandi/ChineseTextProcessingAndRetrieval?style=flat)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A recoverable, traceable Chinese evidence pipeline: fixed public sources → quality and duplicate auditing → local Ray processing → Parquet/JSONL assets and SQLite lineage → retrieval failure analysis → one chunking revision → frozen holdout evaluation.
 
