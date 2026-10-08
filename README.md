@@ -5,7 +5,7 @@
 ![Project wordmark](.github/project-header.svg)
 
 [![offline-evidence](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/workflows/offline.yml/badge.svg)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/actions/workflows/offline.yml)
-[![Stars](https://img.shields.io/github/stars/kimzclandi/ChineseTextProcessingAndRetrieval?style=flat)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/kimzclandi/ChineseTextProcessingAndRetrieval?style=flat)](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 可恢复、可追溯的中文证据数据流水线：公开中文数据寻源 → 质量与重复审计 → Ray本地加工 → Parquet/JSONL数据资产与SQLite血缘 → 检索失败分析 → 一次切块改进 → 冻结后留出集评测。
 
