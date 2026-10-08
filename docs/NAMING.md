@@ -1,6 +1,6 @@
 # 项目名称与兼容性
 
-项目展示名称：**中文文本数据处理与检索评测**。
+项目展示名称：**中文数据处理与检索**。
 
 GitHub 仓库名：`ChineseTextProcessingAndRetrieval`。
 
@@ -21,7 +21,7 @@ git remote set-url origin https://github.com/kimzclandi/ChineseTextProcessingAnd
 
 ## 兼容性与历史记录
 
-此次调整公开仓库名和项目展示名。Python 包名、import、CLI、Go module 路径和协议标识保持兼容，安装与运行命令以当前 README 为准。
+2026-10-09 仅统一项目展示名，GitHub 仓库名和 URL 不变。上方历史仓库名保留用于兼容溯源；Python 包名、import、CLI 和协议标识保持兼容，安装与运行命令以当前 README 为准。
 
 冻结协议、manifest、源码快照、原始预测、实验报告与许可条款保持不变。历史文件中的旧名不是另一个项目；改名不产生新的实验结果。现有 Issue 和 PR 编号继续使用。
 

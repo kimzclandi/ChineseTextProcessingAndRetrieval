@@ -1,4 +1,4 @@
-# 中文文本数据处理与检索评测
+# 中文数据处理与检索
 
 **简体中文** | [English](README.en.md)
 
@@ -15,11 +15,15 @@
 
 新增可选 PreparedBM25：预计算固定项并使用 top-k 选择。640个query-index对的排名与分数保持一致；本机两套索引查询约1.87×/1.86×，额外索引状态为O(V+N)。[固定对照、成本与边界](docs/BM25_EXACT_OPTIMIZATION.md)。
 
-## 功能特性 / Features
+## 从实现到结果
 
-- 中文质量检查、去重与来源血缘。
-- Ray / 串行加工与不可变快照。
-- 固定切分下的检索覆盖和失败分析。
+| 能力 | 代码 | 协议／说明 | 报告与原始记录 |
+|---|---|---|---|
+| 保持排名与分数的查询优化 | [PreparedBM25](engine/prepared_bm25.py) | [固定性能协议](configs/bm25-exact-performance-v1.json) | [同次对照汇总](reports/bm25-exact-performance-v1/summary.json) |
+| 固定预算检索与切块对照 | [检索与评测](engine/retrieval.py) | [冻结协议](configs/protocol.json) | [收益、召回退化与延迟成本](reports/RESULTS.md) |
+| 单机快照、血缘与故障恢复 | [Ray／串行流水线](engine/pipeline.py) | [一致性边界](docs/ARCHITECTURE.md) | [系统实验及 Ray 负结果](reports/systems-v1/result.json) |
+
+[完整证据索引](docs/EVIDENCE_MAP.md) · [个人项目贡献与 AI 辅助边界](CONTRIBUTIONS.md)。代码与实验采用 AI 辅助实现、执行和整理，不声称原创检索算法或生产分布式系统。
 
 ## 系统组成与数据流
 
@@ -57,7 +61,7 @@
 
 ## 规范名称与2-CPU补充证据
 
-规范仓库名为 **ChineseTextProcessingAndRetrieval**，中文名称为“中文文本数据处理与检索评测”，入口为 [GitHub仓库](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval)。旧链接与冻结历史中的旧名称仅作兼容记录。
+规范仓库名为 **ChineseTextProcessingAndRetrieval**，中文显示名称为“中文数据处理与检索”，入口为 [GitHub仓库](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval)。旧链接与冻结历史中的旧名称仅作兼容记录。
 
 后续2-CPU Ray检查覆盖2,403行、256个分片及真实worker退出重试，六项输出逐字节一致。它与下方历史4-CPU系统实验分开记录，不是新的加速或多机证据。[代码、逐项记录与故障边界](docs/EVIDENCE_MAP.md)。
 
