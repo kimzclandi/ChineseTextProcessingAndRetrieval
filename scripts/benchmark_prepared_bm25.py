@@ -24,7 +24,42 @@ def load(p):return [json.loads(line) for line in p.read_text().splitlines() if l
 def save(p,value):p.write_text(json.dumps(value,indent=2,allow_nan=False)+'\n')
 
 
+def validate_timing_schedule(records, spec, query_ids):
+    """Replay the frozen runner's seeded schedule, without executing searches.
+
+    Coverage and medians alone cannot establish a paired comparison: reversing
+    one arm's queries leaves both unchanged. Check recorded execution order as
+    well as each row's declared arm order. This audits records, not wall-clock
+    provenance or whether the measured process actually followed the schedule.
+    """
+    if len(set(query_ids)) != len(query_ids):
+        raise ValueError('Duplicate query identities')
+    expected_count = len(spec['indexes']) * spec['rounds'] * len(spec['arms'])
+    if len(records) != expected_count:
+        raise ValueError('Timing cell count differs from protocol')
+    rng = random.Random(spec['seed'])
+    position = 0
+    for index in spec['indexes']:
+        for round_id in range(spec['rounds']):
+            arm_order = list(spec['arms'])
+            rng.shuffle(arm_order)
+            query_order = list(query_ids)
+            rng.shuffle(query_order)
+            for arm in arm_order:
+                row = records[position]
+                position += 1
+                if type(row['round']) is not int:
+                    raise ValueError('Timing round must be an integer')
+                if (row['index'], row['round'], row['arm']) != (index, round_id, arm):
+                    raise ValueError('Recorded timing order differs from frozen schedule')
+                if row.get('arm_order') != arm_order:
+                    raise ValueError('Recorded arm order differs from frozen schedule')
+                if [sample['id'] for sample in row['queries']] != query_order:
+                    raise ValueError('Recorded query order differs from frozen paired schedule')
+
+
 def summarize(records,spec,query_ids):
+    validate_timing_schedule(records, spec, query_ids)
     expected={(i,r,a) for i in spec['indexes'] for r in range(spec['rounds']) for a in spec['arms']}
     cells={}
     for row in records:
