@@ -18,3 +18,4 @@ jobs:
       - run: python -m pytest -q
       - run: PYTHONPATH=. python scripts/verify_portable.py
       - run: PYTHONPATH=. python scripts/reproduce_portable.py --output work/ci-reproduce
+      - run: python scripts/benchmark_prepared_bm25.py verify --output reports/bm25-exact-performance-v1

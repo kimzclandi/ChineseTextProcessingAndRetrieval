@@ -18,6 +18,8 @@ DOCS = [
     "docs/MAINTAINING.md",
     "docs/NAMING.md",
     "docs/EXPERIMENT_GUIDE.md",
+    "docs/EVIDENCE_MAP.md",
+    "docs/BM25_EXACT_OPTIMIZATION.md",
     ".github/PULL_REQUEST_TEMPLATE.md",
 ]
 OPTIONAL_DOCS = [

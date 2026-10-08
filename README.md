@@ -11,6 +11,10 @@
 
 核心是数据算子、不可变快照、血缘与评测驱动迭代（Evaluation-Driven Development）。无付费API、云GPU、模型训练或生成式回答；指标是检索证据覆盖，**不是大模型回答准确率、CMRC官方成绩或业务收益**。
 
+## 保持结果的查询优化
+
+新增可选 PreparedBM25：预计算固定项并使用 top-k 选择。640个query-index对的排名与分数保持一致；本机两套索引查询约1.87×/1.86×，额外索引状态为O(V+N)。[固定对照、成本与边界](docs/BM25_EXACT_OPTIMIZATION.md)。
+
 ## 功能特性 / Features
 
 - 中文质量检查、去重与来源血缘。

@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "git_head": "abdf6c98e886d9223d6534e0cc16ced36dd8b6a7",
+  "python": "3.12.13 (main, Aug  7 2026, 02:15:23) [Clang 22.1.3 ]",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "source_sha256": {
+    "engine/retrieval.py": "13f465eda16cc92a17369215e212a1066e4b926f8572f53046be659994672c7e",
+    "engine/prepared_bm25.py": "ba03157f0790410cc095d95ef1d9b1df56ac76200e4724b188b21a9fe99666ab",
+    "scripts/benchmark_prepared_bm25.py": "8c531162154bedc77280d0107d7f2600fec3ce93f5d0b2e08b1b1f5031b7750f",
+    "configs/bm25-exact-performance-v1.json": "fef0e3d7c5428af5ef2aac71c274921c7ed6c2309f004df967d65cc85e7ef852"
+  },
+  "input_sha256": {
+    "data/source-v1/dev.jsonl": "9141b2ce0ff24b2572af61275bed3f240cc886b940135dc2fe32f0a4abd72e53",
+    "data/source-v1/holdout.jsonl": "2a1dc7d5318d8e42963f56e40f4bdb90bc81cf34b7ed6fb523ff8af440928a64",
+    "reports/retrieval-v1/baseline/chunks.jsonl": "9d750d9d5a8147c3b32b501ecf5ae2fc52cc3591a2b76b9d45808b783e815372",
+    "reports/retrieval-v1/candidate/chunks.jsonl": "31e3b6c283d281d656e120102dc66b9f637630a42a67619c05c9aee24be071fe"
+  }
+}

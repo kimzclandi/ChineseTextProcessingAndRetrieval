@@ -1,0 +1,14 @@
+{
+  "scope": "Fixed-corpus implementation performance, not new retrieval-quality selection",
+  "seed": 20261008,
+  "indexes": ["baseline", "candidate"],
+  "splits": ["dev", "holdout"],
+  "arms": ["reference", "prepared"],
+  "rounds": 5,
+  "k": 3,
+  "minimum_speedup": 1.05,
+  "minimum_faster_rounds": 4,
+  "correctness": "Require exactly identical chunk IDs, scores and order for every saved query on both indexes before timing. No change to corpus, chunks, query set, BM25 parameters or quality gates.",
+  "timing": "time.perf_counter per search, excludes index construction and correctness comparison; warmed once over all queries; shuffled arm order per round and identical shuffled query order per pair. Record all per-query seconds. Extra O(V+N) index memory is not measured RSS.",
+  "decision": "Report both indexes and all rounds; no parameter tuning or index reselection. Historical holdout is reused only to verify exact implementation equivalence."
+}

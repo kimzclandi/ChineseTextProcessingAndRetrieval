@@ -11,6 +11,10 @@ A recoverable, traceable Chinese evidence pipeline: fixed public sources → qua
 
 The focus is data operators, immutable snapshots, lineage and evaluation-driven iteration. There are no paid APIs, cloud GPUs, model training or generated answers. Metrics measure retrieved evidence coverage, **not language-model answer accuracy, official CMRC scores or business gains**.
 
+## Exact-output query optimization
+
+Optional PreparedBM25 precomputes fixed terms and uses bounded top-k selection. Rankings and scores match on 640 query-index pairs; same-run query speedups are about 1.87x/1.86x, with O(V+N) additional index state. [Protocol, costs and limits](docs/BM25_EXACT_OPTIMIZATION.md).
+
 ## Features
 
 - Chinese text quality checks, deduplication and source lineage.
