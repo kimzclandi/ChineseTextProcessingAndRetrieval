@@ -1,4 +1,4 @@
-# Chinese Text Processing and Retrieval Evaluation
+# Chinese Data Processing and Retrieval
 
 [简体中文](README.md) | **English**
 
@@ -15,11 +15,15 @@ The focus is data operators, immutable snapshots, lineage and evaluation-driven 
 
 Optional PreparedBM25 precomputes fixed terms and uses bounded top-k selection. Rankings and scores match on 640 query-index pairs; same-run query speedups are about 1.87x/1.86x, with O(V+N) additional index state. [Protocol, costs and limits](docs/BM25_EXACT_OPTIMIZATION.md).
 
-## Features
+## From implementation to results
 
-- Chinese text quality checks, deduplication and source lineage.
-- Ray/serial processing and immutable snapshots.
-- Retrieval coverage and failure analysis on fixed splits.
+| Capability | Code | Protocol / scope | Report and records |
+|---|---|---|---|
+| Query optimization preserving rankings and scores | [PreparedBM25](engine/prepared_bm25.py) | [Fixed performance protocol](configs/bm25-exact-performance-v1.json) | [Same-run comparison](reports/bm25-exact-performance-v1/summary.json) |
+| Fixed-budget retrieval and chunking comparison | [Retrieval and evaluation](engine/retrieval.py) | [Frozen protocol](configs/protocol.json) | [Gains, recall regression and latency costs](reports/RESULTS.md) |
+| Single-host snapshots, lineage and recovery | [Ray / serial pipeline](engine/pipeline.py) | [Consistency boundaries](docs/ARCHITECTURE.md) | [System study and negative Ray result](reports/systems-v1/result.json) |
+
+[Full evidence map](docs/EVIDENCE_MAP.md) · [Project contributions and AI assistance](CONTRIBUTIONS.md). Implementation, execution and documentation were AI-assisted; this is not claimed as an original retrieval algorithm or a production distributed system.
 
 ## Components and data flow
 
@@ -131,4 +135,4 @@ Code: [MIT](LICENSE). Data and derived assets: [licensing and attribution](DATA_
 
 ## Canonical name and later 2-CPU evidence
 
-The canonical repository is [ChineseTextProcessingAndRetrieval](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval), titled 中文文本数据处理与检索评测. Historical old names remain unchanged. A later 2-CPU Ray check processes 2,403 rows in 256 shards, including worker exit/retry, with six byte-identical output files. This is separate from the original 4-CPU systems experiment and establishes neither speedup nor multi-host reliability. [Code and evidence map](docs/EVIDENCE_MAP.md).
+The canonical repository is [ChineseTextProcessingAndRetrieval](https://github.com/kimzclandi/ChineseTextProcessingAndRetrieval), with the Chinese display title 中文数据处理与检索. Historical old names remain unchanged. A later 2-CPU Ray check processes 2,403 rows in 256 shards, including worker exit/retry, with six byte-identical output files. This is separate from the original 4-CPU systems experiment and establishes neither speedup nor multi-host reliability. [Code and evidence map](docs/EVIDENCE_MAP.md).
