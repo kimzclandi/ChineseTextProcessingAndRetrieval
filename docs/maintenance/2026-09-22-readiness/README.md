@@ -20,4 +20,4 @@ Expected: tests exit 0; replay and rebuild pass historical contracts. Baseline f
 
 Last successful writer wins. This is one-file atomic publication, not a multi-file transaction or power-loss durability guarantee for the directory. No retrieval gain is claimed.
 
-No new training, human semantic annotation, model-quality uplift or deployment is claimed. For resume mapping and interview questions, see the existing 2026-09-22 maintenance handoff; this addendum changes reliability evidence only.
+No new training, human semantic annotation, model-quality uplift or deployment is claimed. This addendum changes reliability evidence only.
